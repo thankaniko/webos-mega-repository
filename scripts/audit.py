@@ -212,8 +212,53 @@ def metadata(f, ident, ver):
         raise ValueError("unsupported or unknown package architecture: " + arch)
     return arch
 
+def permanent_release_url(m):
+    """Resolve a temporary GitHub asset through public release metadata."""
+    url = m["ipkUrl"]
+    u = urlsplit(url)
+    if u.hostname not in {"release-assets.githubusercontent.com", "objects.githubusercontent.com"}:
+        return url
+    match = re.fullmatch(r"/github-production-release-asset/(\d+)/([^/]+)", u.path)
+    if not match:
+        raise ValueError("temporary release URL has no recoverable repository/filename")
+    repo_id, filename = match.group(1), unquote(match.group(2))
+    expected = "sha256:" + digest(m)
+    found = set()
+    fallback = set()
+    # Public REST endpoint. Never send credentials to upstream download hosts.
+    for page in range(1, 4):
+        releases, _ = read_json("https://api.github.com/repositories/" + repo_id + "/releases?per_page=100&page=" + str(page))
+        if not isinstance(releases, list):
+            raise ValueError("invalid GitHub releases API response")
+        for release in releases:
+            if release.get("draft") or release.get("prerelease"):
+                continue
+            tag = release.get("tag_name", "")
+            for asset in release.get("assets", []):
+                if asset.get("name") != filename:
+                    continue
+                stable = asset.get("browser_download_url", "")
+                if urlsplit(stable).hostname != "github.com" or "/releases/download/" not in urlsplit(stable).path:
+                    continue
+                if EXPERIMENTAL.search(unquote(stable)):
+                    continue
+                safe(stable)
+                sha = asset.get("digest")
+                if sha:
+                    if sha.lower() == expected:
+                        found.add(stable)
+                elif tag.lstrip("vV") == m["version"]:
+                    fallback.add(stable)
+        if found or len(releases) < 100:
+            break
+    choices = found or fallback
+    if len(choices) != 1:
+        raise ValueError("permanent release URL not uniquely matched to manifest")
+    return choices.pop()
+
 def verify(p):
     m = p["manifest"]
+    m["ipkUrl"] = permanent_release_url(m)
     h = hashlib.sha256()
     n = 0
     with tempfile.TemporaryFile() as f, fetch(m["ipkUrl"]) as r:
