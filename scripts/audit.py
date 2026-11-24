@@ -22,8 +22,8 @@ PARTIAL = re.compile(r"\b(slopium|cleanframe|hearth|apl launcher|custom launcher
 ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,199}")
 VERSION = re.compile(r"\d+\.\d+\.\d+")
 HASH = re.compile(r"[a-fA-F0-9]{64}")
-BLOCK_IDS = {"org.webosbrew.hbchannel", "com.open.hidden.menu", "com.m12c.telnet", "com.aurora.gamestream", "org.mariotaku.ihsplay"}
-ALLOWED = {"github.com", "api.github.com", "repo.webosbrew.org", "freemytv.io", "drive.usercontent.google.com", "webosbrew.org"}
+BLOCK_IDS = {"org.webosbrew.hbchannel", "com.open.hidden.menu", "com.m12c.telnet", "com.aurora.gamestream", "org.mariotaku.ihsplay", "ui30", "org.csweb.tv.legacy"}
+ALLOWED = {"github.com", "api.github.com", "repo.webosbrew.org", "freemytv.io", "drive.usercontent.google.com", "webosbrew.org", "mirrors.kodi.tv"}
 SUFFIXES = (".github.io", ".githubusercontent.com")
 
 def safe(url):
@@ -141,13 +141,15 @@ def candidate(item, base):
         m["rootRequired"] = False
     if ident in BLOCK_IDS or PARTIAL.search(title) or re.search(r"\b(xbox cloud gaming|better xcloud|better-xcloud)\b", title, re.I):
         raise ValueError("restricted functionality or Xbox client pending dedicated upstream review")
-    if re.search(r"technical demo", str(m.get("appDescription", "")), re.I):
+    if re.search(r"technical demo|\bexperimental\b|\bearly beta\b", str(m.get("appDescription", "")), re.I):
         raise ValueError("technical demonstration") 
     if ident in {"com.github.k4zmu2a.space-cadet-pinball"}:
         raise ValueError("restricted functionality or privileged tool")
     ipk = absolute(mb, m.get("ipkUrl"))
     if EXPERIMENTAL.search(" ".join([title, str(item.get("pool", "")), unquote(ipk)])):
         raise ValueError("experimental channel or release")
+    if ident == "org.litefin.app" and "legacy" in unquote(ipk).lower():
+        raise ValueError("legacy build excluded; prefer Modern for webOS 25")
     digest(m)
     m["ipkUrl"] = ipk
     for k in ("iconUri", "sourceUrl"):
@@ -308,6 +310,45 @@ def catalog(packages):
 def write(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+def reviewed_candidates():
+    """Explicit upstream choices, still subject to full package verification."""
+    errors = []
+    kodi_icon = "https://repo.webosbrew.org/apps/icons/org.xbmc.kodi.png"
+    kodi = {"id": "org.xbmc.kodi", "title": "Kodi", "iconUri": kodi_icon,
+            "requirements": {"webosRelease": ">=5.0", "deviceSoC": ["!k5lp"]},
+            "manifest": {"id": "org.xbmc.kodi", "title": "Kodi", "version": "21.0.0",
+                "type": "native", "appDescription": "Kodi 21 Omega stable media center",
+                "rootRequired": False, "iconUri": kodi_icon, "sourceUrl": "https://github.com/xbmc/xbmc",
+                "ipkUrl": "https://mirrors.kodi.tv/releases/webos/org.xbmc.kodi-webos_21.0.ipk",
+                "ipkHash": {"sha256": "b8ac326df8ad7cf0b52e4f816ab7c39c95410254b1bc3b9b3d024035ecec58ff"},
+                "ipkSize": 92633392, "installedSize": 233989054}}
+    # Hash from historical Homebrew index; installation without root documented by Kodi.
+    results = [kodi]
+    try:
+        release, _ = read_json("https://api.github.com/repos/MoazSalem/litefin/releases/tags/v2.10.0")
+        if release.get("draft") or release.get("prerelease") or release.get("tag_name") != "v2.10.0":
+            raise ValueError("Litefin release not stable")
+        assets = [a for a in release["assets"] if re.fullmatch(r"Litefin-2\.10\.0-webOS-Modern\.ipk", a.get("name", ""), re.I)]
+        if len(assets) != 1:
+            raise ValueError("Modern IPK not uniquely identified")
+        a = assets[0]
+        h = a.get("digest") or ""
+        if not re.fullmatch(r"sha256:[a-fA-F0-9]{64}", h):
+            raise ValueError("Modern asset has no upstream SHA-256")
+        icon = "https://repo.webosbrew.org/apps/icons/org.litefin.app.png"
+        url = absolute("https://github.com/", a["browser_download_url"])
+        if not url.startswith("https://github.com/MoazSalem/litefin/releases/download/v2.10.0/"):
+            raise ValueError("unexpected Litefin asset origin")
+        results.append({"id": "org.litefin.app", "title": "Litefin",
+            "iconUri": icon, "requirements": {"webosRelease": ">=6.0"},
+            "manifest": {"id": "org.litefin.app", "title": "Litefin", "version": "2.10.0",
+                "type": "web", "appDescription": "Jellyfin client — Modern build",
+                "rootRequired": False, "iconUri": icon, "sourceUrl": "https://github.com/MoazSalem/litefin",
+                "ipkUrl": url, "ipkHash": {"sha256": h.split(":", 1)[1]}, "ipkSize": a["size"]}})
+    except Exception as e:
+        errors.append({"source": "Litefin upstream release", "reason": str(e)})
+    return results, errors
+
 def main():
     base = json.loads((BASE / "apps.json").read_text())
     sources = json.loads((BASE / "sources.json").read_text())
@@ -335,6 +376,16 @@ def main():
                     continue
                 group = proposals.setdefault(ident, {})
                 group[(m["version"], digest(m))] = p
+    reviewed, errors = reviewed_candidates()
+    report["feed_errors"].extend(errors)
+    for p in reviewed:
+        m = p["manifest"]
+        ident = p["id"]
+        if ident in old:
+            previous = old[ident]["manifest"]
+            if version(m["version"]) <= version(previous["version"]) or m.get("sourceUrl") != previous.get("sourceUrl"):
+                continue
+        proposals.setdefault(ident, {})[(m["version"], digest(m))] = p
     verified = []
     def one(entry):
         ident, group = entry
