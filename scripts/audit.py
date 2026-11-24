@@ -358,6 +358,26 @@ def main():
     merged = dict(old)
     merged.update({p["id"]: p for p in verified})
     OUT.mkdir(exist_ok=True)
+    # Discover new Xbox-specific releases without publishing an unreviewed login client.
+    xbox = {"official": "https://www.xbox.com/pt-BR/xbox-on-tvs/",
+            "upstream_warning": "https://github.com/redphx/better-xcloud-tv/issues/10",
+            "status": "MANUAL_REVIEW_REQUIRED", "releases": [], "errors": []}
+    for upstream in ("redphx/better-xcloud-webos", "redphx/better-xcloud-tv"):
+        try:
+            data, _ = read_json("https://api.github.com/repos/" + upstream + "/releases?per_page=5")
+            for release in data:
+                if release.get("draft") or release.get("prerelease"):
+                    continue
+                assets = [{"name": a.get("name"), "url": a.get("browser_download_url"),
+                           "digest": a.get("digest"), "size": a.get("size")}
+                          for a in release.get("assets", [])
+                          if str(a.get("name", "")).lower().endswith((".ipk", ".ipk.zip"))]
+                if assets:
+                    xbox["releases"].append({"repository": upstream, "tag": release.get("tag_name"),
+                        "published": release.get("published_at"), "assets": assets})
+        except Exception as e:
+            xbox["errors"].append({"repository": upstream, "reason": str(e)})
+    write(OUT / "xbox-review.json", xbox)
     write(OUT / "report.json", report)
     write(OUT / "candidates.json", catalog(verified))
     write(OUT / "proposed-apps.json", catalog(merged.values()))
