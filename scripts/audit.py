@@ -45,7 +45,33 @@ class Redirect(urllib.request.HTTPRedirectHandler):
 OPENER = urllib.request.build_opener(Redirect())
 
 def fetch(url):
-    return OPENER.open(urllib.request.Request(safe(url), headers={"User-Agent": "webOS-Mega-Repository-audit/3", "Accept": "*/*"}), timeout=25)
+    # Retry from the ORIGINAL release URL, never from an expired signed redirect.
+    from urllib.error import HTTPError, URLError
+    from urllib.parse import urlunsplit
+    from uuid import uuid4
+    from time import sleep
+    original = safe(url)
+    u = urlsplit(original)
+    release = u.hostname == "github.com" and "/releases/" in u.path
+    for attempt in range(3):
+        target = original
+        if release and attempt:
+            query = "&".join(filter(None, (u.query, "_audit=" + uuid4().hex)))
+            target = urlunsplit((u.scheme, u.netloc, u.path, query, ""))
+        try:
+            return OPENER.open(urllib.request.Request(safe(target), headers={
+                "User-Agent": "webOS-Mega-Repository-audit/3.1", "Accept": "*/*",
+                "Cache-Control": "no-cache", "Pragma": "no-cache"
+            }), timeout=25)
+        except HTTPError as e:
+            if attempt == 2 or e.code not in (403, 408, 429, 500, 502, 503, 504, 618):
+                raise
+            e.close()
+        except (URLError, TimeoutError):
+            if attempt == 2:
+                raise
+        sleep(1 + attempt)
+    raise RuntimeError("download retry exhausted")
 
 def read_json(url):
     with fetch(url) as r:
@@ -91,8 +117,10 @@ def candidate(item, base):
     if not isinstance(ident, str) or not ID.fullmatch(ident) or item.get("id", ident) != ident:
         raise ValueError("invalid or divergent ID")
     version(m.get("version"))
+    if m.get("rootRequired") is True:
+        raise ValueError("root explicitly required")
     if m.get("rootRequired") is not False:
-        raise ValueError("root required or not explicitly ruled out")
+        raise ValueError("root requirement unspecified; manual upstream review needed")
     if ident in BLOCK_IDS or PARTIAL.search(title):
         raise ValueError("restricted functionality or privileged tool")
     ipk = absolute(mb, m.get("ipkUrl"))
@@ -266,6 +294,12 @@ def main():
     write(OUT / "report.json", report)
     write(OUT / "candidates.json", catalog(verified))
     write(OUT / "proposed-apps.json", catalog(merged.values()))
+    pending = [p for ident, group in proposals.items()
+               if not any(v["id"] == ident for v in verified)
+               for p in group.values()]
+    write(OUT / "pending-downloads.json", {"status": "UNVERIFIED_DO_NOT_PUBLISH",
+          "packages": pending})
+    print("Unverified candidate versions:", len(pending))
     print("Existing:", len(old), "| Sources:", len(sources), "| Verified proposals:", len(verified), "| Proposed total:", len(merged))
     print("Runtime on TV not tested. Production apps.json unchanged.")
 if __name__ == "__main__":
