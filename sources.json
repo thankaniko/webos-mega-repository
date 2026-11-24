@@ -22,5 +22,7 @@
   "https://raw.githubusercontent.com/DjVreditel/tiktok-webos/main/HomebrewChannel/tiktok.txt",
   "https://alexesmm.github.io/stremcompat-lg-webos/apps.json",
   "https://atlet99.github.io/rezkatv-public/repository.json",
-  "https://native-webos.github.io/webos-apps-repo/api/non-free/apps.json"
+  "https://native-webos.github.io/webos-apps-repo/api/non-free/apps.json",
+  "https://raw.githubusercontent.com/whatsamenega/my-webos-apps/refs/heads/main/repo.json",
+  "https://raw.githubusercontent.com/lennylxx/webos-iptv-player/main/homebrew-repository.json"
 ]
