@@ -1,0 +1,1079 @@
+{
+  "paging": {
+    "page": 1,
+    "count": 49,
+    "maxPage": 1,
+    "itemsTotal": 49,
+    "prevUrl": null,
+    "nextUrl": null
+  },
+  "packages": [
+    {
+      "id": "com.gabrielecirulli.app2048.webos",
+      "title": "2048 Port for WebOS",
+      "manifest": {
+        "id": "com.gabrielecirulli.app2048.webos",
+        "version": "1.0.0",
+        "type": "web",
+        "title": "2048 Port for WebOS",
+        "appDescription": "Classic 2048 puzzle game ported for LG webOS TVs. Play directly on your TV using Magic Remote or D-Pad.",
+        "iconUri": "https://raw.githubusercontent.com/Kzuismee/2048-Port-for-WebOS/main/com.gabrielecirulli.app2048.webos/icon.png",
+        "sourceUrl": "https://github.com/Kzuismee/2048-Port-for-WebOS",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/Kzuismee/2048-Port-for-WebOS/releases/download/1.0.0/com.gabrielecirulli.app2048.webos_1.0.0_all.ipk",
+        "ipkHash": {
+          "sha256": "814f4e95dd9917e240637df7bf91396498e00d92f2fd1f7993a27c3e0e90db19"
+        }
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.gabrielecirulli.app2048.webos.png",
+      "pool": "main",
+      "shortDescription": "Classic 2048 puzzle game ported for LG webOS TVs. Play directly on your TV using Magic Remote or D-Pad.",
+      "requirements": {
+        "webosRelease": ">=4.0"
+      }
+    },
+    {
+      "id": "com.boosteroidtv.streaming",
+      "title": "Boosteroid Cloud Gaming",
+      "manifest": {
+        "id": "com.boosteroidtv.streaming",
+        "version": "1.0.1",
+        "type": "web",
+        "title": "Boosteroid Cloud Gaming",
+        "appDescription": "Official Boosteroid Cloud Gaming app",
+        "iconUri": "https://webosappclub.github.io/apps/com.boosteroidtv.streaming/icon.png",
+        "sourceUrl": "https://boosteroid.com/",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.boosteroidtv.streaming/com.boosteroidtv.streaming_1.0.1_all.ipk",
+        "ipkHash": {
+          "sha256": "67fb17150842bebc316e563ddfa4ce44cc694d6016a931d6bae6ce555f46f66d"
+        },
+        "ipkSize": 7378932
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.boosteroidtv.streaming/icon.png",
+      "shortDescription": "Official Boosteroid Cloud Gaming app"
+    },
+    {
+      "id": "io.github.sarahahzub.chromium",
+      "title": "Chromium Browser",
+      "manifest": {
+        "id": "io.github.sarahahzub.chromium",
+        "version": "1.1.0",
+        "type": "native",
+        "title": "Chromium Browser",
+        "appDescription": "Native Chromium with the full Chrome UI, GPU rendering and hardware video decoding",
+        "iconUri": "https://raw.githubusercontent.com/sarahahzub/WebOS-Chromium/main/assets/icon.png",
+        "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/sarahahzub/WebOS-Chromium/releases/download/v1.1.0/io.github.sarahahzub.chromium_1.1.0_arm.ipk",
+        "ipkHash": {
+          "sha256": "3b4c1fa1709271e3f92fcdd0c5cafd2257994285e617cbc6026259a978aaa294"
+        },
+        "ipkSize": 110444476
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/io.github.sarahahzub.chromium.png",
+      "pool": "main",
+      "shortDescription": "Native Chromium with the full Chrome UI, GPU rendering and hardware video decoding",
+      "requirements": {
+        "webosRelease": ">=4.4"
+      }
+    },
+    {
+      "id": "kinoflex.ru",
+      "title": "Flex",
+      "manifest": {
+        "id": "kinoflex.ru",
+        "version": "1.8.0",
+        "type": "web",
+        "title": "Flex",
+        "appDescription": "ОНЛАЙН-КИНОТЕАТР FLEX",
+        "iconUri": "https://webosappclub.github.io/apps/kinoflex.ru/icon.png",
+        "sourceUrl": "https://kinoflex.ru",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/kinoflex.ru/kinoflex.ru_1.8.0_all.ipk",
+        "ipkHash": {
+          "sha256": "8d10a150bff387fe7c10f95da0047865d540b93b21e1b4149c468ac5b4a520b3"
+        },
+        "ipkSize": 4494
+      },
+      "iconUri": "https://webosappclub.github.io/apps/kinoflex.ru/icon.png",
+      "shortDescription": "Flex"
+    },
+    {
+      "id": "io.freemytv",
+      "title": "Free My TV",
+      "manifest": {
+        "id": "io.freemytv",
+        "version": "1.5.0",
+        "type": "web",
+        "title": "Free My TV",
+        "appDescription": "A fast, ad-free home screen: your apps on a glass shelf, the weather and prices, day and night.",
+        "iconUri": "https://freemytv.io/assets/icon-512.png",
+        "sourceUrl": "https://github.com/simbasjungles/free-my-tv",
+        "rootRequired": false,
+        "ipkUrl": "https://freemytv.io/webos/FreeMyTV-webos-1.5.0.ipk",
+        "ipkHash": {
+          "sha256": "79fe34bbb87b716c4176ef9e2180fa0c9f8fbaf3e73a17412aebfd7e861952dd"
+        },
+        "ipkSize": 1475596
+      },
+      "iconUri": "https://freemytv.io/assets/icon-512.png",
+      "pool": "main",
+      "shortDescription": "A fast, ad-free home screen: your apps on a glass shelf, the weather and prices, day and night."
+    },
+    {
+      "id": "com.halfbrick.fruitninja",
+      "title": "Fruit Ninja",
+      "manifest": {
+        "id": "com.halfbrick.fruitninja",
+        "version": "1.601.6",
+        "type": "native",
+        "title": "Fruit Ninja",
+        "appDescription": "The worldwide smash hit game Fruit Ninja is now available on webOS (unofficial)!",
+        "iconUri": "https://raw.githubusercontent.com/mariotaku/FruitNinja/v1.6.1-6/deploy/webos/icon.png",
+        "sourceUrl": "https://github.com/mariotaku/FruitNinja",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/mariotaku/FruitNinja/releases/download/v1.6.1-6/com.halfbrick.fruitninja_1.601.6_arm.ipk",
+        "ipkHash": {
+          "sha256": "d2c0fe8a30a2debcc7ed4caa9335914fa15242c5119c6f2ac76a2ff657d17183"
+        },
+        "ipkSize": 6487150,
+        "installedSize": 9977697
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.halfbrick.fruitninja.png",
+      "pool": "main",
+      "shortDescription": "The worldwide smash hit game Fruit Ninja is now available on webOS (unofficial)!"
+    },
+    {
+      "id": "icva",
+      "title": "ICVA",
+      "manifest": {
+        "id": "icva",
+        "version": "1.1.2",
+        "type": "web",
+        "title": "ICVA",
+        "appDescription": "ICVA IPTV player",
+        "iconUri": "https://webosappclub.github.io/apps/icva/icon.png",
+        "sourceUrl": "https://github.com/yumata/lampa/",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/yumata/lampa/releases/download/v1.4.1/icva_v1.1.2.ipk",
+        "ipkHash": {
+          "sha256": "156089221bafa14553c01ecbd60264b863d9cbbe75e8b9f031e1fce51db0a647"
+        },
+        "ipkSize": 5917966
+      },
+      "iconUri": "https://webosappclub.github.io/apps/icva/icon.png",
+      "shortDescription": "IPTV player"
+    },
+    {
+      "id": "com.seeky91.immichtv",
+      "title": "Immich TV",
+      "manifest": {
+        "id": "com.seeky91.immichtv",
+        "title": "Immich TV",
+        "version": "1.7.0",
+        "type": "web",
+        "appDescription": "Read-only Immich photo & video client for LG webOS TVs",
+        "iconUri": "https://raw.githubusercontent.com/Seeky91/immich-tv-webos/main/assets/icon-store.png",
+        "sourceUrl": "https://github.com/Seeky91/immich-tv-webos",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/Seeky91/immich-tv-webos/releases/download/v1.7.0/com.seeky91.immichtv_1.7.0_all.ipk",
+        "ipkHash": {
+          "sha256": "a4a2f1a3c08ab76ffd9b299f43f7e3efb1d470a49109b2c1416ebabe0845b2fc"
+        },
+        "ipkSize": 1283358
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.seeky91.immichtv.png",
+      "pool": "main",
+      "shortDescription": "Read-only Immich photo & video client for LG webOS TVs",
+      "requirements": {
+        "webosRelease": ">=5.0"
+      }
+    },
+    {
+      "id": "com.685631.3411",
+      "title": "Kinopoisk",
+      "manifest": {
+        "id": "com.685631.3411",
+        "version": "10.140.0",
+        "type": "web",
+        "title": "Kinopoisk",
+        "appDescription": "Official Kinopoisk app",
+        "iconUri": "https://webosappclub.github.io/apps/com.685631.3411/icon.png",
+        "sourceUrl": "https://hd.kinopoisk.ru/",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.685631.3411/com.685631.3411_10.140.0_all.ipk",
+        "ipkHash": {
+          "sha256": "95a0dbcbdf47888f83de8362333f806c6fafdc9527968ab78c59e995caf6c73c"
+        },
+        "ipkSize": 2076526
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.685631.3411/icon.png",
+      "shortDescription": "Official Kinopoisk app"
+    },
+    {
+      "id": "com.huawei.app.webos.mts.tv.production",
+      "title": "KION",
+      "manifest": {
+        "id": "com.huawei.app.webos.mts.tv.production",
+        "version": "3.1.4",
+        "type": "web",
+        "title": "KION",
+        "appDescription": "Official KION app",
+        "iconUri": "https://webosappclub.github.io/apps/com.huawei.app.webos.mts.tv.production/icon.png",
+        "sourceUrl": "https://kion.ru/",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.huawei.app.webos.mts.tv.production/com.huawei.app.webos.mts.tv.production_3.1.4_all.ipk",
+        "ipkHash": {
+          "sha256": "08283d382fe11a64eaef44eaec9a424c9402564eaa4da696f9990e18bdd75756"
+        },
+        "ipkSize": 3692434
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.huawei.app.webos.mts.tv.production/icon.png",
+      "shortDescription": "Official KION app"
+    },
+    {
+      "id": "lampa.tv",
+      "title": "Lampa",
+      "manifest": {
+        "id": "lampa.tv",
+        "version": "2.3.0",
+        "type": "web",
+        "title": "Lampa",
+        "appDescription": "Lampa app",
+        "iconUri": "https://webosappclub.github.io/apps/lampa.tv/icon.png",
+        "sourceUrl": "https://github.com/yumata/lampa",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/lampa.tv/lampa.tv_2.3.0_all.ipk",
+        "ipkHash": {
+          "sha256": "04d204f5d7412351843d1eb0cab25fdd65f44abff2e20188b41ee24c2e00aa87"
+        },
+        "ipkSize": 6372920
+      },
+      "iconUri": "https://webosappclub.github.io/apps/lampa.tv/icon.png",
+      "shortDescription": "Movie catalog"
+    },
+    {
+      "id": "com.limelight.webos",
+      "title": "Moonlight",
+      "manifest": {
+        "id": "com.limelight.webos",
+        "version": "1.6.36",
+        "type": "native",
+        "title": "Moonlight",
+        "appDescription": "Open Source NVIDIA GameStream Client",
+        "iconUri": "https://github.com/mariotaku/moonlight-tv/raw/main/deploy/webos/icon.png",
+        "sourceUrl": "https://github.com/mariotaku/moonlight-tv",
+        "ipkUrl": "https://github.com/mariotaku/moonlight-tv/releases/download/v1.6.36/com.limelight.webos_1.6.36_arm.ipk",
+        "ipkHash": {
+          "sha256": "74d9788be634b57fed0591e7e82c9e3d8856dc46d14d29998a481724299d8824"
+        },
+        "ipkSize": 1508072,
+        "installedSize": 4300994,
+        "rootRequired": false
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.limelight.webos.png",
+      "fullDescriptionUrl": "https://repo.webosbrew.org/api/apps/com.limelight.webos/full_description.html",
+      "detailIconUri": "https://raw.githubusercontent.com/mariotaku/moonlight-tv/main/res/moonlight_320.png",
+      "shortDescription": "Open Source NVIDIA GameStream Client",
+      "pool": "main"
+    },
+    {
+      "id": "com.moviebox.webos",
+      "title": "MovieBox",
+      "manifest": {
+        "id": "com.moviebox.webos",
+        "version": "1.2.2",
+        "type": "web",
+        "title": "MovieBox",
+        "appDescription": "High-performance streaming app for LG webOS Smart TVs featuring multi-provider movie & series catalog, 4K/1080p hardware-accelerated playback, multi-language subtitles, and remote-friendly spatial navigation.",
+        "iconUri": "https://raw.githubusercontent.com/codes-of-santhosh/webos-moviebox/main/design_Webos/images/icon.png",
+        "sourceUrl": "https://github.com/codes-of-santhosh/webos-moviebox",
+        "rootRequired": false,
+        "ipkUrl": "https://raw.githubusercontent.com/codes-of-santhosh/webos-moviebox/main/repo/com.moviebox.webos_1.2.2_all.ipk",
+        "ipkHash": {
+          "sha256": "39031bafe21f3ab992b05abf2e44577127ee34b701d0e9b93444d3d5aa100238"
+        },
+        "ipkSize": 345726
+      },
+      "iconUri": "https://raw.githubusercontent.com/codes-of-santhosh/webos-moviebox/main/design_Webos/images/icon.png",
+      "shortDescription": "High-performance movie & TV streaming app for LG webOS TVs with multi-provider failover, HEVC/4K playback, and subtitles.",
+      "requirements": {
+        "webosRelease": ">=4.0"
+      }
+    },
+    {
+      "id": "org.twitch.altplayer.tv",
+      "title": "No Ads Purple",
+      "manifest": {
+        "id": "org.twitch.altplayer.tv",
+        "version": "0.3.3",
+        "type": "web",
+        "title": "No Ads Purple",
+        "appDescription": "Twitch TV with alternate playback, BetterTTV emotes and automatic reward claims",
+        "iconUri": "https://github.com/rsm23/violet-no-ads-webos/releases/download/v0.3.3/icon.png",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/rsm23/violet-no-ads-webos/releases/download/v0.3.3/org.twitch.altplayer.tv_0.3.3_all.ipk",
+        "ipkHash": {
+          "sha256": "80bdb66b562f2ed2de3464d9115679567a14fe0abd1b5c70202716db82bafac9"
+        }
+      },
+      "iconUri": "https://github.com/rsm23/violet-no-ads-webos/releases/download/v0.3.3/icon.png",
+      "shortDescription": "Twitch TV with alternate playback, BetterTTV emotes and automatic claims for available channel-point bonuses and earned Drops."
+    },
+    {
+      "id": "space.nuvio.webos",
+      "title": "Nuvio TV",
+      "manifest": {
+        "id": "space.nuvio.webos",
+        "version": "1.4.6",
+        "type": "web",
+        "title": "Nuvio TV",
+        "appDescription": "Locally packaged LG webOS build for Nuvio TV.",
+        "iconUri": "https://raw.githubusercontent.com/NuvioMedia/NuvioTVWebOS/main/icon.png",
+        "sourceUrl": "https://github.com/NuvioMedia/NuvioWeb",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/NuvioMedia/NuvioTVSmart/releases/download/1.4.6/NuvioTV-webOS-1.4.6.ipk",
+        "ipkHash": {
+          "sha256": "fdc1d0496ed022c2e2212688fc21a94aaf1aeac9f18db78b9f7b4f5863ad5ff7"
+        },
+        "ipkSize": 8460372
+      },
+      "iconUri": "https://raw.githubusercontent.com/NuvioMedia/NuvioTVWebOS/main/icon.png",
+      "pool": "main",
+      "shortDescription": "Locally packaged LG webOS build for Nuvio TV."
+    },
+    {
+      "id": "com.geforcenow.play",
+      "title": "NVIDIA GeForce® NOW™",
+      "manifest": {
+        "id": "com.geforcenow.play",
+        "version": "1.0.3",
+        "type": "web",
+        "title": "NVIDIA GeForce® NOW™ ",
+        "appDescription": "Official NVIDIA GeForce® NOW™ app",
+        "iconUri": "https://webosappclub.github.io/apps/com.geforcenow.play/icon.png",
+        "sourceUrl": "https://www.nvidia.com/en-eu/geforce-now/",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.geforcenow.play/com.geforcenow.play_1.0.3_all.ipk",
+        "ipkHash": {
+          "sha256": "e9b1b994bc54ef381311ee006dc981d4bebd163f56b8f225bbae5d357b04652b"
+        },
+        "ipkSize": 79764
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.geforcenow.play/icon.png",
+      "shortDescription": "Official NVIDIA GeForce® NOW™ app"
+    },
+    {
+      "id": "yota.play",
+      "title": "Okko",
+      "manifest": {
+        "id": "yota.play",
+        "version": "22.0.0",
+        "type": "web",
+        "title": "Okko",
+        "appDescription": "Official Okko app",
+        "iconUri": "https://webosappclub.github.io/apps/yota.play/icon.png",
+        "sourceUrl": "https://okko.tv",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/yota.play/yota.play_22.0.0_all.ipk",
+        "ipkHash": {
+          "sha256": "bbea024ebb37ea1b19a5667e19769695cac52e671dd5d053644ef51e00376c2f"
+        },
+        "ipkSize": 201202
+      },
+      "iconUri": "https://webosappclub.github.io/apps/yota.play/icon.png",
+      "shortDescription": "Official Okko app"
+    },
+    {
+      "id": "com.spacesarmat.torrplayer",
+      "title": "OMP",
+      "manifest": {
+        "id": "com.spacesarmat.torrplayer",
+        "version": "0.30.2",
+        "type": "web",
+        "title": "OMP",
+        "appDescription": "Open Movie Player - media player for your own TorrServer",
+        "iconUri": "https://raw.githubusercontent.com/spacesarmat/omp/main/webos/largeIcon.png",
+        "sourceUrl": "https://github.com/spacesarmat/omp",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/spacesarmat/omp/releases/download/v0.30.2/OMP-0.30.2-webOS.ipk",
+        "ipkHash": {
+          "sha256": "e3140ad2d48ee7790232ee9f1f4d28d5504d4939ec4fb75b4452075116a7f699"
+        },
+        "ipkSize": 1224180
+      },
+      "iconUri": "https://raw.githubusercontent.com/spacesarmat/omp/main/webos/largeIcon.png",
+      "pool": "main",
+      "shortDescription": "Open Movie Player - media player for your own TorrServer"
+    },
+    {
+      "id": "com.m12c.owal",
+      "title": "Online webOS App Launcher",
+      "manifest": {
+        "id": "com.m12c.owal",
+        "version": "1.0.0",
+        "type": "web",
+        "title": "Online webOS App Launcher",
+        "appDescription": "Online webOS App Launcher exists so you can try the apps even if you barely have storage.",
+        "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/kmc_20260124_195025.png",
+        "sourceUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases/download/OWAL/com.m12c.owal_1.0.0.ipk",
+        "ipkHash": {
+          "sha256": "f64342c08c3ef27bdf7cab47950b0e6fd162c81a43d75254cccb9c4a9c11aad1"
+        },
+        "ipkSize": 1410508
+      },
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/kmc_20260124_195025.png",
+      "shortDescription": "OWAL for LG TV's."
+    },
+    {
+      "id": "com.open.hidden.menu",
+      "title": "Open Service Menu",
+      "manifest": {
+        "id": "com.open.hidden.menu",
+        "version": "1.5.1",
+        "type": "web",
+        "title": "Open Service Menu",
+        "appDescription": "An overlay app to quickly open webOS hidden service menus (inStart, ezAdjust, etc.) without interrupting the current app or HDMI input.\n\n//!// Do not change anything in the hidden menu unless you know what you are doing //!//\n\nApp made by Kzu.\nThanks!",
+        "rootRequired": false,
+        "iconUri": "https://raw.githubusercontent.com/nguy3nloan1986-dotcom/Open-Service-Menu/main/icon.png",
+        "sourceUrl": "https://github.com/nguy3nloan1986-dotcom/Open-Service-Menu",
+        "ipkUrl": "https://github.com/Kzuismee/Open-Service-Menu/releases/download/1.5.1/com.open.hidden.menu_1.5.1_all.ipk",
+        "ipkHash": {
+          "sha256": "369d26a1f20b72eecbd6cb27fea14a86eb70219ed353cca93505af1b33f955e2"
+        }
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.open.hidden.menu.png",
+      "pool": "main",
+      "shortDescription": "An overlay app to quickly open webOS hidden service menus (inStart, ezAdjust, etc.) without interrupting the current app or HDMI input.\n\n//!// Do not change anything in the hidden menu unless you know what you are doing //!//\n\nApp made by Kzu.\nThanks!",
+      "requirements": {
+        "webosRelease": ">=4.0"
+      }
+    },
+    {
+      "id": "com.ottplay.app",
+      "title": "Ott-play",
+      "manifest": {
+        "id": "com.ottplay.app",
+        "version": "0.2.2",
+        "type": "web",
+        "title": "Ott-play",
+        "appDescription": "Ott-play by Alex IPTV player",
+        "iconUri": "https://webosappclub.github.io/apps/com.ottplay.app/icon.png",
+        "sourceUrl": "",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.ottplay.app/com.ottplay.app_0.2.2_all.ipk",
+        "ipkHash": {
+          "sha256": "edc75d1b0606f81c3b930457643b2f0c314c0e64d536390b4019b30d45735199"
+        },
+        "ipkSize": 329544
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.ottplay.app/icon.png",
+      "shortDescription": "IPTV player"
+    },
+    {
+      "id": "io.unom.punktfunk.client-webos",
+      "title": "Punktfunk",
+      "manifest": {
+        "id": "io.unom.punktfunk.client-webos",
+        "version": "0.27.1",
+        "type": "native",
+        "title": "Punktfunk",
+        "appDescription": "Punktfunk — low-latency desktop/game streaming client",
+        "iconUri": "https://raw.githubusercontent.com/punktfunk/client-webos/main/packaging/icon_large.png",
+        "sourceUrl": "https://github.com/punktfunk/client-webos",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/punktfunk/client-webos/releases/download/0.27.1/io.unom.punktfunk.client-webos_0.27.1_arm.ipk",
+        "ipkHash": {
+          "sha256": "9b9a9404a676bcd456fce520ebde20b8a0879c6a0d0f31ec1a2c2f29f8ca0179"
+        },
+        "ipkSize": 13296094,
+        "installedSize": 27821412
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/io.unom.punktfunk.client-webos.png",
+      "pool": "main",
+      "shortDescription": "Punktfunk — low-latency desktop/game streaming client",
+      "requirements": {
+        "webosRelease": ">=4"
+      }
+    },
+    {
+      "id": "com.qiiia.demo",
+      "title": "Quake III Arena Demo",
+      "manifest": {
+        "id": "com.qiiia.demo",
+        "version": "0.0.2",
+        "type": "web",
+        "title": "Quake III Arena Demo",
+        "appDescription": "Functioning Telnet running on LG webOS TV.",
+        "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/Picsart_26-01-24_12-45-50-759.png",
+        "sourceUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases/download/lgnore/com.qiiia.demo_0.0.2.ipk",
+        "ipkHash": {
+          "sha256": "32eff401a003263814ea8ee438ee98ad1bedb9195aae3ac106a4ae72b4a7c190"
+        },
+        "ipkSize": 1888218
+      },
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/Picsart_26-01-24_12-45-50-759.png",
+      "shortDescription": ""
+    },
+    {
+      "id": "com.qiiia.mp",
+      "title": "Quake III Arena Multiplayer",
+      "manifest": {
+        "id": "com.qiiia.mp",
+        "version": "0.0.2",
+        "type": "web",
+        "title": "Quake III Arena Multiplayer",
+        "appDescription": "Quake III Arena Port but with Multiplayer. webOS 6+ supported only.",
+        "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/Picsart_26-01-24_12-45-04-427.png",
+        "sourceUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases/download/lgnore/com.qiiia.mp_0.0.2.ipk",
+        "ipkHash": {
+          "sha256": "4b625d13851625fa58068967fc9ccef40dd3ccd794dac9ca9e67e68d871f4799"
+        },
+        "ipkSize": 1989168
+      },
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/Picsart_26-01-24_12-45-04-427.png",
+      "shortDescription": "Quake III Arena Port but with Multiplayer."
+    },
+    {
+      "id": "com.rezkatv.app",
+      "title": "RezkaTV",
+      "manifest": {
+        "id": "com.rezkatv.app",
+        "version": "1.1.29",
+        "type": "web",
+        "title": "RezkaTV",
+        "appDescription": "Media streaming client for LG webOS TV (Modern - webOS 5.x+)",
+        "iconUri": "https://github.com/atlet99/rezkatv-public/raw/main/webos/icon.png",
+        "sourceUrl": "https://github.com/atlet99/rezkatv-public",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/atlet99/rezkatv-public/releases/download/v1.1.29/com.rezkatv.app_1.1.29_all.ipk",
+        "ipkHash": {
+          "sha256": "10279681e1db97a716fa02f7f961a4fc3bdbeabeed4fce7cfc873ade8ae709e5"
+        },
+        "ipkSize": 7534070,
+        "minWebOSVersion": "5.0.0",
+        "maxWebOSVersion": "99.0.0",
+        "longDescription": "Полнофункциональная версия для webOS 5+"
+      },
+      "iconUri": "https://github.com/atlet99/rezkatv-public/raw/main/webos/largeIcon.png",
+      "pool": "main",
+      "category": "entertainment",
+      "shortDescription": "Modern version for webOS 5.x+ (2020+)"
+    },
+    {
+      "id": "io.github.danzig666.remotedesktv",
+      "title": "RustCouch",
+      "manifest": {
+        "id": "io.github.danzig666.remotedesktv",
+        "version": "0.12.0",
+        "type": "native",
+        "title": "RustCouch",
+        "appDescription": "RustDesk-compatible remote desktop client (community project)",
+        "iconUri": "https://raw.githubusercontent.com/danzig666/webos-rustdesk-client/homebrew-repo/icon.png",
+        "sourceUrl": "https://github.com/danzig666/webos-rustdesk-client",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/danzig666/webos-rustdesk-client/releases/download/v0.12.0/io.github.danzig666.remotedesktv_0.12.0_arm.ipk",
+        "ipkHash": {
+          "sha256": "18201914fb58c1a1307af43116dc6c4646b14fc59f6f04b4f0be43fc639abe39"
+        }
+      },
+      "iconUri": "https://raw.githubusercontent.com/danzig666/webos-rustdesk-client/homebrew-repo/icon.png",
+      "shortDescription": "Control your computer from the TV with the regular RustDesk app: Magic Remote mouse, full on-screen keyboard (US/Hungarian), hardware video, audio. Community project, not affiliated with RustDesk or LG."
+    },
+    {
+      "id": "siptv",
+      "title": "Smart IPTV",
+      "manifest": {
+        "id": "siptv",
+        "version": "3.0.3",
+        "type": "web",
+        "title": "Smart IPTV",
+        "appDescription": "Smart IPTV",
+        "iconUri": "https://webosappclub.github.io/apps/siptv/icon.png",
+        "sourceUrl": "https://siptv.eu/",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/siptv/siptv_3.0.3_all.ipk",
+        "ipkHash": {
+          "sha256": "f793e42fb3e0a35460c3a7f12bc55beb7228ff53f814aa76d3fc38a1bfe49372"
+        },
+        "ipkSize": 583892
+      },
+      "iconUri": "https://webosappclub.github.io/apps/siptv/icon.png",
+      "shortDescription": "Smart IPTV app"
+    },
+    {
+      "id": "tv.spelunkr.webos",
+      "title": "Spelunkr",
+      "manifest": {
+        "id": "tv.spelunkr.webos",
+        "version": "0.3.7",
+        "type": "web",
+        "title": "Spelunkr",
+        "appDescription": "An independent Spelunkr TV client for webOS",
+        "iconUri": "https://raw.githubusercontent.com/Nikolay1243/spelunkr-webos/main/homebrew/icon.png",
+        "sourceUrl": "https://github.com/Nikolay1243/spelunkr-webos",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/Nikolay1243/spelunkr-webos/releases/download/v0.3.7/tv.spelunkr.webos_0.3.7_all.ipk",
+        "ipkHash": {
+          "sha256": "e289796f4a7bcad0aa1055ecdc18a6c5849377af9acac0a4609a2b9ae59ef941"
+        }
+      },
+      "iconUri": "https://raw.githubusercontent.com/Nikolay1243/spelunkr-webos/main/homebrew/icon.png"
+    },
+    {
+      "id": "spotify-beehive",
+      "title": "Spotify",
+      "manifest": {
+        "id": "spotify-beehive",
+        "version": "2.0.36",
+        "type": "web",
+        "title": "Spotify",
+        "appDescription": "Official Spotify app",
+        "iconUri": "https://webosappclub.github.io/apps/spotify-beehive/icon.png",
+        "sourceUrl": "https://spotify.com",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/spotify-beehive/spotify-beehive_2.0.36_all.ipk",
+        "ipkHash": {
+          "sha256": "42581f2c1a65a25e2ad800e4b873d58ba174d892148b0564a0fe17bf2e4bc239"
+        },
+        "ipkSize": 5972128
+      },
+      "iconUri": "https://webosappclub.github.io/apps/spotify-beehive/icon.png",
+      "shortDescription": "Official Spotify app"
+    },
+    {
+      "id": "com.ssiptv.app",
+      "title": "SS IPTV",
+      "manifest": {
+        "id": "com.ssiptv.app",
+        "version": "1.0.612",
+        "type": "web",
+        "title": "SS IPTV",
+        "appDescription": "IPTV Player",
+        "iconUri": "https://webosappclub.github.io/apps/com.ssiptv.app/icon.png",
+        "sourceUrl": "https://ss-iptv.com",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.ssiptv.app/com.ssiptv.app_1.0.612_all.ipk",
+        "ipkHash": {
+          "sha256": "80ab4e267eae473fe328885cda81871a2121a7210bdd9a07dc09cbff84c96a07"
+        },
+        "ipkSize": 172850
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.ssiptv.app/icon.png",
+      "shortDescription": "SS IPTV"
+    },
+    {
+      "id": "io.github.alexesmm.legacytv",
+      "title": "StremCompat",
+      "manifest": {
+        "id": "io.github.alexesmm.legacytv",
+        "version": "4.6.0",
+        "type": "web",
+        "title": "StremCompat",
+        "appDescription": "Your Stremio or Nuvio account and addons on older LG TVs (webOS 3 and newer). Unofficial, and it needs no root.",
+        "iconUri": "https://alexesmm.github.io/stremcompat-lg-webos/icon.png",
+        "sourceUrl": "https://github.com/StremCompat/stremcompat",
+        "rootRequired": false,
+        "ipkUrl": "https://alexesmm.github.io/stremcompat-lg-webos/io.github.alexesmm.legacytv_4.6.0_all.ipk",
+        "ipkHash": {
+          "sha256": "6677476d7e405370c10377468c74ef2e59dade5037c0c556baf4b3856b1e82fd"
+        }
+      },
+      "iconUri": "https://alexesmm.github.io/stremcompat-lg-webos/icon.png",
+      "pool": "main",
+      "shortDescription": "Your Stremio or Nuvio account and addons on older LG TVs (webOS 3 and newer). Unofficial, and it needs no root."
+    },
+    {
+      "id": "tv.stremioorigin.app",
+      "title": "Stremio Origin",
+      "manifest": {
+        "id": "tv.stremioorigin.app",
+        "version": "1.1.1",
+        "type": "native",
+        "title": "Stremio Origin",
+        "appDescription": "A native app for Stremio addons, written in C. You bring the account and addons; it ships empty. 28 languages. Unofficial.",
+        "iconUri": "https://stremio-origin.github.io/webos/icon.png",
+        "sourceUrl": "https://github.com/stremio-origin/webos",
+        "rootRequired": false,
+        "ipkUrl": "https://stremio-origin.github.io/webos/tv.stremioorigin.app_1.1.1_arm.ipk",
+        "ipkHash": {
+          "sha256": "9b5a0b165861af4572fc143f90c21881abb0bdd8385d5ee458f89f784fddb688"
+        }
+      },
+      "iconUri": "https://repo.webosbrew.org/apps/icons/tv.stremioorigin.app.png",
+      "pool": "main",
+      "shortDescription": "A native app for Stremio addons, written in C. You bring the account and addons; it ships empty. 28 languages. Unofficial.",
+      "requirements": {
+        "webosRelease": ">=3.0"
+      }
+    },
+    {
+      "id": "com.tidal.tv",
+      "title": "TIDAL",
+      "manifest": {
+        "id": "com.tidal.tv",
+        "version": "1.0.0",
+        "type": "web",
+        "title": "TIDAL",
+        "appDescription": "Official TIDAL app",
+        "iconUri": "https://webosappclub.github.io/apps/ccom.tidal.tv/icon.png",
+        "sourceUrl": "https://tidal.com/",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/com.tidal.tv/com.tidal.tv_1.0.0_all.ipk",
+        "ipkHash": {
+          "sha256": "c8554c0b8156aaf5c6ce65259e0ac82a1b8e43204b90c42ee88f3f94831eabf4"
+        },
+        "ipkSize": 1087184
+      },
+      "iconUri": "https://webosappclub.github.io/apps/com.tidal.tv/icon.png",
+      "shortDescription": "Official TIDAL app"
+    },
+    {
+      "id": "tiktok.djvreditel.v1",
+      "title": "TikTok",
+      "manifest": {
+        "id": "tiktok.djvreditel.v1",
+        "version": "1.1.0",
+        "type": "web",
+        "title": "TikTok",
+        "iconUri": "https://raw.githubusercontent.com/DjVreditel/tiktok-webos/main/assets/largeIcon.png",
+        "sourceUrl": "https://github.com/DjVreditel/tiktok-webos",
+        "rootRequired": false,
+        "ipkUrl": "https://drive.usercontent.google.com/uc?id=10lgcgX8Tp58hK2tAMD_MTyj4GWTXAKre&export=download",
+        "ipkHash": {
+          "sha256": "acda05efc34d6c252d83057db10da0d53c171822874612a1a4a8fcba66d404f4"
+        }
+      },
+      "iconUri": "https://raw.githubusercontent.com/DjVreditel/tiktok-webos/main/assets/largeIcon.png",
+      "shortDescription": "Unofficial TikTok App for WebOS with extended features"
+    },
+    {
+      "id": "tonalo",
+      "title": "Tonalo",
+      "manifest": {
+        "id": "tonalo",
+        "version": "1.11.6",
+        "type": "web",
+        "title": "Tonalo",
+        "appDescription": "Unofficial Navidrome/Subsonic client for LG webOS TVs",
+        "iconUri": "https://raw.githubusercontent.com/Wzkiie/tonalo/main/assets/icon-512.png",
+        "sourceUrl": "https://github.com/Wzkiie/tonalo",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/Wzkiie/tonalo/releases/download/v1.11.6/tonalo_1.11.6_all.ipk",
+        "ipkSize": 181806,
+        "ipkHash": {
+          "sha256": "454c5f8272fd3a0c32b26a07e6212a12fb9f4792d40f4e91c9f9605e21918978"
+        }
+      },
+      "iconUri": "https://raw.githubusercontent.com/Wzkiie/tonalo/main/assets/icon-512.png",
+      "pool": "main",
+      "shortDescription": "Unofficial Navidrome/Subsonic client for LG webOS TVs",
+      "requirements": {
+        "webosRelease": ">=5.0"
+      }
+    },
+    {
+      "id": "torrserv.matrix.app",
+      "title": "Torrserver MatriX",
+      "manifest": {
+        "id": "torrserv.matrix.app",
+        "version": "0.3.9",
+        "type": "native",
+        "title": "Torrserver MatriX",
+        "appDescription": "Torrent stream server for webOS",
+        "iconUri": "https://webosappclub.github.io/apps/torrserv.matrix.app/icon.png",
+        "sourceUrl": "https://github.com/YouROK/TorrServer",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/torrserv.matrix.app/torrserv.matrix.app_0.3.9_all.ipk",
+        "ipkHash": {
+          "sha256": "a68fcd84a8611d35f6177375cfc40b83ac2e26b82290bfdc9ce7616b8013fd5f"
+        },
+        "ipkSize": 20348472
+      },
+      "iconUri": "https://webosappclub.github.io/apps/torrserv.matrix.app/icon.png",
+      "shortDescription": "Torrent stream server for webOS"
+    },
+    {
+      "id": "vkvideo",
+      "title": "VK Video",
+      "manifest": {
+        "id": "vkvideo",
+        "version": "1.3.13",
+        "type": "web",
+        "title": "VK Video",
+        "appDescription": "VK Video",
+        "iconUri": "https://webosappclub.github.io/apps/vkvideo/icon.png",
+        "sourceUrl": "https://vk.com/vkvideo",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/vkvideo/vkvideo_1.3.13_all.ipk",
+        "ipkHash": {
+          "sha256": "56388d8d32f56b6803b4b7bb083c36afc92c0efd194a71155ac64e442e89be8d"
+        },
+        "ipkSize": 2326962
+      },
+      "iconUri": "https://webosappclub.github.io/apps/vkvideo/icon.png",
+      "shortDescription": "VK Video"
+    },
+    {
+      "id": "com.m12c.filemanager",
+      "title": "webOS File Manager",
+      "manifest": {
+        "id": "com.m12c.filemanager",
+        "version": "0.0.1",
+        "type": "web",
+        "title": "webOS File Manager",
+        "appDescription": "Functioning File Manager running on LG webOS TV.",
+        "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/largeIcon%20(2).png",
+        "sourceUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases#release-Appp",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases/download/Appp/com.m12c.filemanager_0.0.1_.ipk",
+        "ipkHash": {
+          "sha256": "ed62c9c5a4f22fc603fdec602ed59606c3a75dca2bf47eb438873534882e4aa8"
+        },
+        "ipkSize": 33786
+      },
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/largeIcon%20(2).png",
+      "shortDescription": "Functioning File Manager running on LG webOS TV."
+    },
+    {
+      "id": "com.m12c.telnet",
+      "title": "webOS Telnet",
+      "manifest": {
+        "id": "com.m12c.telnet",
+        "version": "0.0.1",
+        "type": "web",
+        "title": "webOS Telnet",
+        "appDescription": "Functioning Telnet running on LG webOS TV.",
+        "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/largeIcon.png",
+        "sourceUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases#release-App",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/itsRealM12C/itsrealm12c.github.io/releases/download/Okay/com.m12c.telnet_0.0.1.ipk",
+        "ipkHash": {
+          "sha256": "18c6f06e7c066633520ef100c9267ddeef747d4782e85948736ee1c778473e91"
+        },
+        "ipkSize": 26000
+      },
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/itsrealm12c.github.io/refs/heads/main/icon.png",
+      "shortDescription": "Functioning Telnet running on LG webOS TV."
+    },
+    {
+      "id": "wikipedia.app",
+      "title": "Wikipedia",
+      "manifest": {
+        "id": "wikipedia.app",
+        "version": "0.0.4",
+        "type": "web",
+        "title": "Wikipedia",
+        "appDescription": "",
+        "iconUri": "https://webosappclub.github.io/apps/wikipedia.app/icon.png",
+        "sourceUrl": "",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/wikipedia.app/wikipedia.app_0.0.4_all.ipk",
+        "ipkHash": {
+          "sha256": "25087247cc6d810a2f50c342c8212e2c21ca23aa7b2bcd54b830daa9325bd79a"
+        },
+        "ipkSize": 302412
+      },
+      "iconUri": "https://webosappclub.github.io/apps/wikipedia.app/icon.png",
+      "shortDescription": "Wikipedia application"
+    },
+    {
+      "id": "ru.rt.video.app.tv",
+      "title": "Wink",
+      "manifest": {
+        "id": "ru.rt.video.app.tv",
+        "version": "5.34.6",
+        "type": "web",
+        "title": "Wink",
+        "appDescription": "Official Wink app",
+        "iconUri": "https://webosappclub.github.io/apps/ru.rt.video.app.tv/icon.png",
+        "sourceUrl": "https://wink.ru",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/ru.rt.video.app.tv/ru.rt.video.app.tv_5.34.6_all.ipk",
+        "ipkHash": {
+          "sha256": "c670d4254dbccf173f80039a41f05a009c87154b17310fafdec4369274ca1ec2"
+        },
+        "ipkSize": 326386
+      },
+      "iconUri": "https://webosappclub.github.io/apps/ru.rt.video.app.tv/icon.png",
+      "shortDescription": "Official Wink app"
+    },
+    {
+      "id": "org.sostk.wpebrowser",
+      "title": "Wren",
+      "manifest": {
+        "id": "org.sostk.wpebrowser",
+        "version": "0.3.3",
+        "type": "native",
+        "title": "Wren",
+        "appDescription": "Native WebKit web browser for LG webOS TVs",
+        "iconUri": "https://raw.githubusercontent.com/sostk/webos-wpe-browser/v0.3.3/browser/largeIcon.png",
+        "sourceUrl": "https://github.com/sostk/webos-wpe-browser",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/sostk/webos-wpe-browser/releases/download/v0.3.3/org.sostk.wpebrowser_0.3.3_arm.ipk",
+        "ipkHash": {
+          "sha256": "607d5a1f130a4d1df6f2d05cfc73f811e020b0e98d3f20feee5ddac58ce6c6d4"
+        },
+        "ipkSize": 91461848,
+        "installedSize": 190210
+      },
+      "iconUri": "https://native-webos.github.io/webos-apps-repo/apps/icons/org.sostk.wpebrowser.png",
+      "pool": "main",
+      "shortDescription": "Native WebKit web browser for LG webOS TVs",
+      "requirements": {
+        "webosRelease": ">=5.0"
+      }
+    },
+    {
+      "id": "com.webosflux.xuptertv.fidelity",
+      "title": "XuperMH",
+      "manifest": {
+        "id": "com.webosflux.xuptertv.fidelity",
+        "version": "2.32.5",
+        "type": "web",
+        "title": "XuperMH",
+        "appDescription": "XuperMH para LG webOS: interfaz multimedia con catálogo, televisión en vivo y reproducción. Edición 2.32.5 de AarónMH.",
+        "iconUri": "https://raw.githubusercontent.com/Schrodinger097c/xupertv-webos-homebrew/main/icon.png",
+        "sourceUrl": "https://github.com/Schrodinger097c/xupertv-webos-homebrew",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/Schrodinger097c/xupertv-webos-homebrew/releases/download/v.2.0/XuperMH-v2.32.5-720-CORREGIDA.ipk",
+        "ipkHash": {
+          "sha256": "52ec7f491c6e92f0a6cad41153aa67588b73e836796040df598da4a1c55fed13"
+        },
+        "ipkSize": 22641218
+      },
+      "iconUri": "https://raw.githubusercontent.com/Schrodinger097c/xupertv-webos-homebrew/main/icon.png",
+      "shortDescription": "XuperMH 2.32.5 para LG webOS. TV en vivo, catálogo multimedia y reproducción."
+    },
+    {
+      "id": "youtube.leanback.v4.webos22",
+      "title": "YouTube AdFree (webOS 22+)",
+      "manifest": {
+        "id": "youtube.leanback.v4.webos22",
+        "version": "0.8.5",
+        "type": "web",
+        "title": "YouTube AdFree (webOS 22+)",
+        "appDescription": "YouTube AdFree for webOS 22 and newer. Lighter optimized build supporting newer hardware.",
+        "iconUri": "https://raw.githubusercontent.com/NicholasBly/youtube-webos/main/assets/icon.png",
+        "sourceUrl": "https://github.com/NicholasBly/youtube-webos",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/NicholasBly/youtube-webos/releases/download/0.8.5/youtube.leanback.v4_0.8.5_all_webOS22%2B.ipk",
+        "ipkHash": {
+          "sha256": "fca8855b7155aceb1d930002a4dd11e49b67e509e97e63b9b6e6f8d348dad987"
+        }
+      },
+      "iconUri": "https://raw.githubusercontent.com/NicholasBly/youtube-webos/main/assets/icon.png"
+    },
+    {
+      "id": "com.cobalt.youtube.adfree",
+      "title": "YouTube Cobalt AdFree (Separate ID)",
+      "manifest": {
+        "id": "com.cobalt.youtube.adfree",
+        "version": "2.6.48",
+        "type": "native",
+        "title": "YouTube Cobalt AdFree",
+        "iconUri": "https://raw.githubusercontent.com/danzig666/youtube-webos-cobalt-adfree/main/assets/largeIcon.png",
+        "sourceUrl": "https://github.com/danzig666/youtube-webos-cobalt-adfree",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/danzig666/youtube-webos-cobalt-adfree/releases/download/v2.6.48-beta.1/com.cobalt.youtube.adfree_2.6.48_arm.ipk",
+        "ipkHash": {
+          "sha256": "387e3fdd9d16c2756eacd23b777a4436ff914dc9d5356f84e2adc9b5ea82b221"
+        },
+        "ipkSize": 17825174
+      },
+      "iconUri": "https://raw.githubusercontent.com/danzig666/youtube-webos-cobalt-adfree/main/assets/largeIcon.png",
+      "shortDescription": "Installs alongside official YouTube. Ad blocking, SponsorBlock and remote playback controls."
+    },
+    {
+      "id": "youtube.leanback.v4",
+      "title": "YouTube Foxtended",
+      "manifest": {
+        "id": "youtube.leanback.v4",
+        "version": "0.10.0",
+        "type": "web",
+        "title": "YouTube Foxtended",
+        "appDescription": "Ad-free YouTube for webOS 3 and newer, with SponsorBlock, Return YouTube Dislike and DeArrow.",
+        "iconUri": "https://raw.githubusercontent.com/foxi69/youtube-webos/main/assets/icon.png",
+        "sourceUrl": "https://github.com/foxi69/youtube-webos",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/foxi69/youtube-webos/releases/download/v0.10.0/youtube.leanback.v4_0.10.0_all.ipk",
+        "ipkHash": {
+          "sha256": "8029c94872c97e5487b8aa12336c3861a1d740ea31aee1668d9a80ca3352c36e"
+        }
+      },
+      "iconUri": "https://raw.githubusercontent.com/foxi69/youtube-webos/main/assets/icon.png",
+      "shortDescription": "Ad-free YouTube for webOS 3 and newer, with SponsorBlock, Return YouTube Dislike and DeArrow."
+    },
+    {
+      "id": "io.github.danzig666.ytnative",
+      "title": "ytnative",
+      "manifest": {
+        "appDescription": "SmartTube ported to LG webOS: a native (Rust) YouTube client for the TV, without ads",
+        "iconUri": "https://raw.githubusercontent.com/danzig666/ytnative/v0.2.72/crates/app/pkg/icon.png",
+        "id": "io.github.danzig666.ytnative",
+        "ipkHash": {
+          "sha256": "79bf14b866fb2b2e4ce758581eb27ff7f206c5a637478a07fe205a9f49e6555e"
+        },
+        "ipkSize": 14377220,
+        "ipkUrl": "https://github.com/danzig666/ytnative/releases/download/v0.2.72/io.github.danzig666.ytnative_0.2.72_arm.ipk",
+        "rootRequired": false,
+        "sourceUrl": "https://github.com/danzig666/ytnative",
+        "title": "ytnative",
+        "type": "native",
+        "version": "0.2.72"
+      },
+      "iconUri": "https://raw.githubusercontent.com/danzig666/ytnative/v0.2.72/crates/app/pkg/icon.png",
+      "pool": "main",
+      "shortDescription": "SmartTube for LG webOS: a native YouTube client without ads"
+    },
+    {
+      "id": "lgsmarttv",
+      "title": "Zala Yasna",
+      "manifest": {
+        "id": "lgsmarttv",
+        "version": "2.0.12",
+        "type": "web",
+        "title": "Zala Yasna",
+        "appDescription": "Official Zala Yasna app",
+        "iconUri": "https://webosappclub.github.io/apps/lgsmarttv/icon.png",
+        "sourceUrl": "",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/lgsmarttv/lgsmarttv_2.0.12_all.ipk",
+        "ipkHash": {
+          "sha256": "24493d3e6e228d0846434ba5094162c95665683977481184a7728d953c099356"
+        },
+        "ipkSize": 112650
+      },
+      "iconUri": "https://webosappclub.github.io/apps/lgsmarttv/icon.png",
+      "shortDescription": "Official Zala Yasna app"
+    },
+    {
+      "id": "webos.energy.saving",
+      "title": "Экономия энергии",
+      "manifest": {
+        "id": "webos.energy.saving",
+        "version": "3.0.1",
+        "type": "native",
+        "title": "Экономия энергии",
+        "appDescription": "Настройка экономии энергии",
+        "iconUri": "https://webosappclub.github.io/apps/webos.energy.saving/icon.png",
+        "sourceUrl": "",
+        "rootRequired": false,
+        "ipkUrl": "https://webosappclub.github.io/apps/webos.energy.saving/webos.energy.saving_3.0.1.ipk",
+        "ipkHash": {
+          "sha256": "cc75738dd6db3447f55af400d39b357bd2e2457582b5f7dce5072b03048e5e6f"
+        },
+        "ipkSize": 72296
+      },
+      "iconUri": "https://webosappclub.github.io/apps/webos.energy.saving/icon.png",
+      "shortDescription": "app"
+    }
+  ]
+}
