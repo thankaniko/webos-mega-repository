@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
       - name: Validate Python syntax
@@ -27,7 +27,7 @@ jobs:
       - name: Audit upstream packages
         run: python3 -u scripts/audit.py
       - name: Upload reviewed candidates and audit evidence
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: webos-audit
           path: audit-output/
