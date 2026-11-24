@@ -100,7 +100,12 @@ def candidate(item, base):
     m = item.get("manifest")
     mb = base
     if item.get("manifestUrl"):
-        ext, mb = read_json(absolute(base, item["manifestUrl"]))
+        manifest_url = absolute(base, item["manifestUrl"])
+        ext, mb = read_json(manifest_url)
+        # A relative sibling asset belongs to the permanent release URL,
+        # not to the temporary signed CDN address used to serve its JSON.
+        if urlsplit(manifest_url).hostname == "github.com" and "/releases/download/" in urlsplit(manifest_url).path:
+            mb = manifest_url
         if m:
             for k in ("id", "version", "rootRequired"):
                 if m.get(k) != ext.get(k):
@@ -120,8 +125,25 @@ def candidate(item, base):
     if m.get("rootRequired") is True:
         raise ValueError("root explicitly required")
     if m.get("rootRequired") is not False:
-        raise ValueError("root requirement unspecified; manual upstream review needed")
-    if ident in BLOCK_IDS or PARTIAL.search(title):
+        # Narrow exceptions backed by the official project's no-root documentation.
+        # Only these reviewed versions, publishers and digests may fill an absent flag.
+        reviewed = {
+            ("com.retroarch.webos", "1.22.2", "0b8ead78b49f02097986a14776d1d90ce856184a11290e8c3640f1001b02d4e3"): (
+                "https://github.com/webosbrew/RetroArch",
+                "https://repo.webosbrew.org/apps/com.retroarch.webos/"),
+            ("org.scummvm.scummvm", "1.3.0", "7160edef1667a1f76fb0573cd7a44d714a423e9b3c8ef4d664822287a3601326"): (
+                "https://github.com/RF1705/scummvm-webos",
+                "https://repo.webosbrew.org/apps/org.scummvm.scummvm/"),
+        }
+        evidence = reviewed.get((ident, m["version"], digest(m)))
+        if m.get("rootRequired") is not None or not evidence or m.get("sourceUrl", "").rstrip("/") != evidence[0]:
+            raise ValueError("root requirement unspecified; manual upstream review needed")
+        m["rootRequired"] = False
+    if ident in BLOCK_IDS or PARTIAL.search(title) or re.search(r"\b(xbox cloud gaming|better xcloud|better-xcloud)\b", title, re.I):
+        raise ValueError("restricted functionality or Xbox client pending dedicated upstream review")
+    if re.search(r"technical demo", str(m.get("appDescription", "")), re.I):
+        raise ValueError("technical demonstration") 
+    if ident in {"com.github.k4zmu2a.space-cadet-pinball"}:
         raise ValueError("restricted functionality or privileged tool")
     ipk = absolute(mb, m.get("ipkUrl"))
     if EXPERIMENTAL.search(" ".join([title, str(item.get("pool", "")), unquote(ipk)])):
