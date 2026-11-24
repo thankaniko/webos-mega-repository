@@ -1,0 +1,35 @@
+name: Audit webOS catalog
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit.py'
+      - 'sources.json'
+      - '.github/workflows/audit.yml'
+permissions:
+  contents: read
+concurrency:
+  group: webos-catalog-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate Python syntax
+        run: python3 -m py_compile scripts/audit.py
+      - name: Audit upstream packages
+        run: python3 -u scripts/audit.py
+      - name: Upload reviewed candidates and audit evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: webos-audit
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 14
