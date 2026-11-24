@@ -1,9 +1,9 @@
 {
   "paging": {
     "page": 1,
-    "count": 76,
+    "count": 79,
     "maxPage": 1,
-    "itemsTotal": 76,
+    "itemsTotal": 79,
     "prevUrl": null,
     "nextUrl": null
   },
@@ -56,6 +56,24 @@
       "requirements": {
         "webosRelease": ">=6.0"
       }
+    },
+    {
+      "id": "org.aniplayer.tv",
+      "title": "AniPlayer",
+      "manifest": {
+        "id": "org.aniplayer.tv",
+        "version": "2.2.0",
+        "type": "web",
+        "title": "AniPlayer",
+        "appDescription": "Le tue storie. Il tuo schermo.",
+        "iconUri": "https://whatsamenega.github.io/my-webos-apps/aniplayer/icon.png",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/whatsamenega/my-webos-apps/releases/download/v2.2.0/org.aniplayer.tv_2.2.0_all.ipk",
+        "ipkHash": {
+          "sha256": "666dc31d409d00eda90ad817f51c000eddb0eaeb2d52ba316d8ca72ce34db0da"
+        }
+      },
+      "iconUri": "https://whatsamenega.github.io/my-webos-apps/aniplayer/icon.png"
     },
     {
       "id": "com.pirate.refresh",
@@ -959,6 +977,30 @@
       "shortDescription": "Quake III Arena Port but with Multiplayer."
     },
     {
+      "id": "com.retroarch.webos",
+      "title": "RetroArch",
+      "manifest": {
+        "id": "com.retroarch.webos",
+        "version": "1.22.2",
+        "type": "native",
+        "title": "RetroArch",
+        "appDescription": "Emulation frontend",
+        "iconUri": "https://github.com/webosbrew/RetroArch/raw/webos/webos/icon160.png",
+        "sourceUrl": "https://github.com/webosbrew/RetroArch",
+        "ipkUrl": "https://github.com/webosbrew/RetroArch/releases/download/v1.22.2/com.retroarch.webos_1.22.2_arm.ipk",
+        "ipkHash": {
+          "sha256": "0b8ead78b49f02097986a14776d1d90ce856184a11290e8c3640f1001b02d4e3"
+        },
+        "ipkSize": 4659060,
+        "installedSize": 13379941,
+        "rootRequired": false
+      },
+      "pool": "main",
+      "shortDescription": "Emulation frontend",
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.retroarch.webos.png",
+      "fullDescriptionUrl": "https://tbsniller.github.io/apps-repo/api/apps/com.retroarch.webos/full_description.html"
+    },
+    {
       "id": "com.rezkatv.app",
       "title": "RezkaTV",
       "manifest": {
@@ -1003,6 +1045,29 @@
       },
       "iconUri": "https://raw.githubusercontent.com/danzig666/webos-rustdesk-client/homebrew-repo/icon.png",
       "shortDescription": "Control your computer from the TV with the regular RustDesk app: Magic Remote mouse, full on-screen keyboard (US/Hungarian), hardware video, audio. Community project, not affiliated with RustDesk or LG."
+    },
+    {
+      "id": "org.scummvm.scummvm",
+      "title": "ScummVM",
+      "manifest": {
+        "id": "org.scummvm.scummvm",
+        "version": "1.3.0",
+        "type": "native",
+        "title": "ScummVM",
+        "appDescription": "Classic adventure game engine",
+        "iconUri": "https://raw.githubusercontent.com/scummvm/scummvm/v2026.3.0/dists/emscripten/assets/scummvm-192.png",
+        "sourceUrl": "https://github.com/RF1705/scummvm-webos",
+        "ipkUrl": "https://github.com/RF1705/scummvm-webos/releases/download/scummvm_2026.3.0_webos_1.3.0/org.scummvm.scummvm_1.3.0_arm.ipk",
+        "ipkHash": {
+          "sha256": "7160edef1667a1f76fb0573cd7a44d714a423e9b3c8ef4d664822287a3601326"
+        },
+        "ipkSize": 24641862,
+        "rootRequired": false
+      },
+      "pool": "main",
+      "shortDescription": "Classic adventure game engine",
+      "iconUri": "https://repo.webosbrew.org/apps/icons/org.scummvm.scummvm.png",
+      "fullDescriptionUrl": "https://repo.webosbrew.org/api/apps/org.scummvm.scummvm/full_description.html"
     },
     {
       "id": "com.sendspin.cinema",
