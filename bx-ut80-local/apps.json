@@ -13,16 +13,16 @@
       "title": "BX UT80 Local",
       "manifest": {
         "id": "org.webos.community.bxut80local",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "type": "web",
         "title": "BX UT80 Local",
         "appDescription": "Variante experimental para LG UT80/webOS 25; otimização de codecs, diagnóstico WebRTC, sem root. Homologação física pendente.",
         "rootRequired": false,
-        "ipkUrl": "https://raw.githubusercontent.com/thankaniko/webos-mega-repository/bx-ut80-local-feed/bx-ut80-local/dist/org.webos.community.bxut80local_1.0.2_all.ipk",
+        "ipkUrl": "https://raw.githubusercontent.com/thankaniko/webos-mega-repository/bx-ut80-local-feed/bx-ut80-local/dist/org.webos.community.bxut80local_1.0.3_all.ipk",
         "ipkHash": {
-          "sha256": "e01e319fd1b07aa291f74f21f443c591e25c25b5ec7e146ca95fd8d06d4407da"
+          "sha256": "e15d02463f188129f715c6cf789f84c45ff90e553e4f07bbed755683424e28ff"
         },
-        "ipkSize": 10486,
+        "ipkSize": 11486,
         "iconUri": "https://raw.githubusercontent.com/thankaniko/webos-mega-repository/bx-ut80-local-feed/bx-ut80-local/icon.png",
         "sourceUrl": "https://github.com/thankaniko/webos-mega-repository/tree/bx-ut80-local-feed/bx-ut80-local"
       },
