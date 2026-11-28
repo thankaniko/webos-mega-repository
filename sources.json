@@ -24,5 +24,6 @@
   "https://atlet99.github.io/rezkatv-public/repository.json",
   "https://native-webos.github.io/webos-apps-repo/api/non-free/apps.json",
   "https://raw.githubusercontent.com/whatsamenega/my-webos-apps/refs/heads/main/repo.json",
-  "https://raw.githubusercontent.com/lennylxx/webos-iptv-player/main/homebrew-repository.json"
+  "https://raw.githubusercontent.com/lennylxx/webos-iptv-player/main/homebrew-repository.json",
+  "https://raw.githubusercontent.com/sarahahzub/WebOS-Chromium/main/webosbrew/apps.json"
 ]
