@@ -1,7 +1,7 @@
 """Offline regression tests for catalog identity and conflict quarantine."""
 import unittest
 from unittest.mock import patch
-from scripts.audit import conflicting_versions, validate_baseline, scan_source
+from scripts.audit import conflicting_versions, validate_baseline, scan_source, candidate
 
 A = "a" * 64
 B = "b" * 64
@@ -38,6 +38,14 @@ class CatalogIntegrity(unittest.TestCase):
 
     def test_different_versions_not_conflict(self):
         self.assertEqual(conflicting_versions({("1.0.0", A): {}, ("1.1.0", B): {}}), {})
+
+class DeprecatedPackages(unittest.TestCase):
+    def test_legacy_chromium_excluded(self):
+        p = pkg("org.nativechromium.browser")
+        p["title"] = "Chromium (old)"
+        p["manifest"].update(rootRequired=False, ipkUrl="https://github.com/example/repo/releases/download/v1.0.0/old.ipk")
+        with self.assertRaisesRegex(ValueError, "restricted"):
+            candidate(p, "https://raw.githubusercontent.com/example/repo/main/apps.json")
 
 class FeedIsolation(unittest.TestCase):
     URL = "https://repo.webosbrew.org/apps.json"

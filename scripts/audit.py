@@ -22,7 +22,7 @@ PARTIAL = re.compile(r"\b(slopium|cleanframe|hearth|apl launcher|custom launcher
 ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,199}")
 VERSION = re.compile(r"\d+\.\d+\.\d+")
 HASH = re.compile(r"[a-fA-F0-9]{64}")
-BLOCK_IDS = {"org.webosbrew.hbchannel", "com.open.hidden.menu", "com.m12c.telnet", "com.aurora.gamestream", "org.mariotaku.ihsplay", "ui30", "org.csweb.tv.legacy"}
+BLOCK_IDS = {"org.webosbrew.hbchannel", "com.open.hidden.menu", "com.m12c.telnet", "com.aurora.gamestream", "org.mariotaku.ihsplay", "ui30", "org.csweb.tv.legacy", "org.nativechromium.browser"}
 ALLOWED = {"github.com", "api.github.com", "repo.webosbrew.org", "freemytv.io", "drive.usercontent.google.com", "webosbrew.org", "mirrors.kodi.tv"}
 SUFFIXES = (".github.io", ".githubusercontent.com")
 

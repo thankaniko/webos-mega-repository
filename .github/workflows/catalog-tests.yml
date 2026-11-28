@@ -6,12 +6,14 @@ on:
       - 'scripts/**'
       - 'tests/**'
       - 'apps.json'
+      - 'sources.json'
       - '.github/workflows/catalog-tests.yml'
   pull_request:
     paths:
       - 'scripts/**'
       - 'tests/**'
       - 'apps.json'
+      - 'sources.json'
       - '.github/workflows/catalog-tests.yml'
   workflow_dispatch:
 permissions:
