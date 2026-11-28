@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-28",
+  "audit_run": "https://github.com/thankaniko/webos-mega-repository/actions/runs/46139324062",
+  "audit_commit": "b9e7e685e55aeec9b5aa36ba4e606228d67661f8",
+  "artifact_id": 15260549350,
+  "artifact_sha256": "acddcec55ed2ffd9bbf7d0d0e6ee7bb947e3f7047f1aefe2721bc8cbd9a4d9a4",
+  "baseline": 79,
+  "final": 82,
+  "added": 3,
+  "updated": 7,
+  "changes": [
+    {
+      "id": "io.github.sarahahzub.chromium",
+      "title": "Chromium Browser",
+      "previous": "1.1.0",
+      "version": "1.1.5",
+      "architecture": "arm",
+      "bytes": 110448972,
+      "sha256": "c0fa15e8068d0367bd86c69999e71605e105689d555cb422138c60d4d83fd2c5",
+      "ipkUrl": "https://github.com/sarahahzub/WebOS-Chromium/releases/download/v1.1.5/io.github.sarahahzub.chromium_1.1.5_arm.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "com.sostk.nativejelly",
+      "title": "Native Jelly",
+      "previous": "0.10.0",
+      "version": "0.11.0",
+      "architecture": "arm",
+      "bytes": 21624502,
+      "sha256": "f0bdeac4291680625b52baf3a977062838a30b91cd4aee6db71a823f792117c2",
+      "ipkUrl": "https://github.com/sostk/native-jelly/releases/download/v0.11.0/com.sostk.nativejelly_0.11.0_arm.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "space.nuvio.webos",
+      "title": "Nuvio TV",
+      "previous": "1.4.6",
+      "version": "1.5.0",
+      "architecture": "all",
+      "bytes": 8554882,
+      "sha256": "df83b8bd05c8e4dba30d9257657444b130ac78a25570119b2ec09492735e852f",
+      "ipkUrl": "https://github.com/NuvioMedia/NuvioTVSmart/releases/download/1.5.0/NuvioTV-webOS-1.5.0.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "com.spacesarmat.torrplayer",
+      "title": "OMP",
+      "previous": "0.30.2",
+      "version": "0.30.4",
+      "architecture": "all",
+      "bytes": 1257308,
+      "sha256": "c21f4429edc2228f507c3dd79e449d254089c34fbc0c0fc9d30895a9e7242fab",
+      "ipkUrl": "https://github.com/spacesarmat/omp/releases/download/v0.30.4/OMP-0.30.4-webOS.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "io.github.alexesmm.legacytv",
+      "title": "StremCompat",
+      "previous": "4.6.0",
+      "version": "4.8.0",
+      "architecture": "all",
+      "bytes": 6736164,
+      "sha256": "8cb8223dbb02a4dc013d1d0e97ba6517042f7ceb5ee4b23d41a90a0161a6652f",
+      "ipkUrl": "https://alexesmm.github.io/stremcompat-lg-webos/io.github.alexesmm.legacytv_4.8.0_all.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "youtube.leanback.v4",
+      "title": "YouTube Foxtended",
+      "previous": "0.10.0",
+      "version": "0.11.0",
+      "architecture": "all",
+      "bytes": 213964,
+      "sha256": "5974b5d544afa7cff0511bb9df1956beb52e86ab6ca85659631b3c918f5a5085",
+      "ipkUrl": "https://github.com/foxi69/youtube-webos/releases/download/v0.11.0/youtube.leanback.v4_0.11.0_all.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "io.github.danzig666.ytnative",
+      "title": "ytnative",
+      "previous": "0.2.72",
+      "version": "0.2.76",
+      "architecture": "arm",
+      "bytes": 15274232,
+      "sha256": "625a50ec5b83d6b9f9dcd5c20b057c038a6fd07a35bfe120e0f4ebd83d4a8a87",
+      "ipkUrl": "https://github.com/danzig666/ytnative/releases/download/v0.2.76/io.github.danzig666.ytnative_0.2.76_arm.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "com.sostk.vplayer",
+      "title": "Pylon",
+      "previous": null,
+      "version": "0.1.0",
+      "architecture": "arm",
+      "bytes": 40633328,
+      "sha256": "855dd7efaebca50ccb323edacbf0c1e0ffd937bdba51fe00e878853cbbe243a1",
+      "ipkUrl": "https://github.com/Native-Webos/vplayer/releases/download/v0.1.0/Pylon-0.1.0-webos-arm.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "com.cristian.turboriviera",
+      "title": "Turbo Riviera",
+      "previous": null,
+      "version": "1.0.1",
+      "architecture": "all",
+      "bytes": 5036452,
+      "sha256": "897d85b2c0df92d9c70d5fe56b988cb1c52c3975d95a4adac9d25c12bff4ef83",
+      "ipkUrl": "https://raw.githubusercontent.com/famcellini/TurboRiviera/main/dist/turboRiviera.ipk",
+      "rootRequired": false
+    },
+    {
+      "id": "org.litefin.app",
+      "title": "Litefin",
+      "previous": null,
+      "version": "2.10.0",
+      "architecture": "all",
+      "bytes": 3684564,
+      "sha256": "634015526513466b296db8df812e80e7df66baf38f8f7327a062eddce477fd95",
+      "ipkUrl": "https://github.com/MoazSalem/litefin/releases/download/v2.10.0/Litefin-2.10.0-webOS-Modern.ipk",
+      "rootRequired": false
+    }
+  ],
+  "limitations": "Binary integrity and internal metadata verified by audit CI; physical TV installation and native dependencies not verified. Turbo Riviera is from the non-free pool, and its upstream raw URL is mutable; digest must match at download. Existing flagged entries retained; Kodi rejected."
+}

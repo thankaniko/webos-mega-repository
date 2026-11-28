@@ -1,9 +1,9 @@
 {
   "paging": {
     "page": 1,
-    "count": 79,
+    "count": 82,
     "maxPage": 1,
-    "itemsTotal": 79,
+    "itemsTotal": 82,
     "prevUrl": null,
     "nextUrl": null
   },
@@ -174,18 +174,18 @@
       "title": "Chromium Browser",
       "manifest": {
         "id": "io.github.sarahahzub.chromium",
-        "version": "1.1.0",
+        "version": "1.1.5",
         "type": "native",
         "title": "Chromium Browser",
         "appDescription": "Native Chromium with the full Chrome UI, GPU rendering and hardware video decoding",
         "iconUri": "https://raw.githubusercontent.com/sarahahzub/WebOS-Chromium/main/assets/icon.png",
         "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
         "rootRequired": false,
-        "ipkUrl": "https://github.com/sarahahzub/WebOS-Chromium/releases/download/v1.1.0/io.github.sarahahzub.chromium_1.1.0_arm.ipk",
+        "ipkUrl": "https://github.com/sarahahzub/WebOS-Chromium/releases/download/v1.1.5/io.github.sarahahzub.chromium_1.1.5_arm.ipk",
         "ipkHash": {
-          "sha256": "3b4c1fa1709271e3f92fcdd0c5cafd2257994285e617cbc6026259a978aaa294"
+          "sha256": "c0fa15e8068d0367bd86c69999e71605e105689d555cb422138c60d4d83fd2c5"
         },
-        "ipkSize": 110444476
+        "ipkSize": 110448972
       },
       "iconUri": "https://repo.webosbrew.org/apps/icons/io.github.sarahahzub.chromium.png",
       "pool": "main",
@@ -564,6 +564,29 @@
       "shortDescription": "Movie catalog"
     },
     {
+      "iconUri": "https://repo.webosbrew.org/apps/icons/org.litefin.app.png",
+      "requirements": {
+        "webosRelease": ">=6.0"
+      },
+      "manifest": {
+        "iconUri": "https://repo.webosbrew.org/apps/icons/org.litefin.app.png",
+        "appDescription": "Jellyfin client — Modern build",
+        "id": "org.litefin.app",
+        "title": "Litefin",
+        "version": "2.10.0",
+        "type": "web",
+        "sourceUrl": "https://github.com/MoazSalem/litefin",
+        "ipkUrl": "https://github.com/MoazSalem/litefin/releases/download/v2.10.0/Litefin-2.10.0-webOS-Modern.ipk",
+        "ipkHash": {
+          "sha256": "634015526513466b296db8df812e80e7df66baf38f8f7327a062eddce477fd95"
+        },
+        "ipkSize": 3684564,
+        "rootRequired": false
+      },
+      "id": "org.litefin.app",
+      "title": "Litefin"
+    },
+    {
       "id": "org.moonfin.webos",
       "title": "Moonfin",
       "manifest": {
@@ -643,17 +666,18 @@
       "manifest": {
         "id": "com.sostk.nativejelly",
         "title": "Native Jelly",
-        "version": "0.10.0",
+        "version": "0.11.0",
         "type": "native",
         "rootRequired": false,
-        "ipkUrl": "https://github.com/sostk/native-jelly/releases/download/v0.10.0/com.sostk.nativejelly_0.10.0_arm.ipk",
+        "ipkUrl": "https://github.com/sostk/native-jelly/releases/download/v0.11.0/com.sostk.nativejelly_0.11.0_arm.ipk",
         "ipkHash": {
-          "sha256": "c6e8f5ba448f9e970d8335ab33c2f945b68d22b65d073f9b14fb5bdd4eb33aff"
+          "sha256": "f0bdeac4291680625b52baf3a977062838a30b91cd4aee6db71a823f792117c2"
         },
-        "ipkSize": 21458406,
+        "ipkSize": 21624502,
         "iconUri": "https://raw.githubusercontent.com/sostk/native-jelly/main/pkg/icon160.png",
         "sourceUrl": "https://github.com/sostk/native-jelly",
-        "appDescription": "Unofficial native Jellyfin client - not affiliated with Jellyfin"
+        "appDescription": "Unofficial native Jellyfin client - not affiliated with Jellyfin",
+        "installedSize": 42879
       },
       "iconUri": "https://raw.githubusercontent.com/sostk/native-jelly/main/pkg/icon160.png",
       "pool": "main",
@@ -686,18 +710,18 @@
       "title": "Nuvio TV",
       "manifest": {
         "id": "space.nuvio.webos",
-        "version": "1.4.6",
+        "version": "1.5.0",
         "type": "web",
         "title": "Nuvio TV",
         "appDescription": "Locally packaged LG webOS build for Nuvio TV.",
         "iconUri": "https://raw.githubusercontent.com/NuvioMedia/NuvioTVWebOS/main/icon.png",
         "sourceUrl": "https://github.com/NuvioMedia/NuvioWeb",
         "rootRequired": false,
-        "ipkUrl": "https://github.com/NuvioMedia/NuvioTVSmart/releases/download/1.4.6/NuvioTV-webOS-1.4.6.ipk",
+        "ipkUrl": "https://github.com/NuvioMedia/NuvioTVSmart/releases/download/1.5.0/NuvioTV-webOS-1.5.0.ipk",
         "ipkHash": {
-          "sha256": "fdc1d0496ed022c2e2212688fc21a94aaf1aeac9f18db78b9f7b4f5863ad5ff7"
+          "sha256": "df83b8bd05c8e4dba30d9257657444b130ac78a25570119b2ec09492735e852f"
         },
-        "ipkSize": 8460372
+        "ipkSize": 8554882
       },
       "iconUri": "https://raw.githubusercontent.com/NuvioMedia/NuvioTVWebOS/main/icon.png",
       "pool": "main",
@@ -775,18 +799,18 @@
       "title": "OMP",
       "manifest": {
         "id": "com.spacesarmat.torrplayer",
-        "version": "0.30.2",
+        "version": "0.30.4",
         "type": "web",
         "title": "OMP",
         "appDescription": "Open Movie Player - media player for your own TorrServer",
         "iconUri": "https://raw.githubusercontent.com/spacesarmat/omp/main/webos/largeIcon.png",
         "sourceUrl": "https://github.com/spacesarmat/omp",
         "rootRequired": false,
-        "ipkUrl": "https://github.com/spacesarmat/omp/releases/download/v0.30.2/OMP-0.30.2-webOS.ipk",
+        "ipkUrl": "https://github.com/spacesarmat/omp/releases/download/v0.30.4/OMP-0.30.4-webOS.ipk",
         "ipkHash": {
-          "sha256": "e3140ad2d48ee7790232ee9f1f4d28d5504d4939ec4fb75b4452075116a7f699"
+          "sha256": "c21f4429edc2228f507c3dd79e449d254089c34fbc0c0fc9d30895a9e7242fab"
         },
-        "ipkSize": 1224180
+        "ipkSize": 1257308
       },
       "iconUri": "https://raw.githubusercontent.com/spacesarmat/omp/main/webos/largeIcon.png",
       "pool": "main",
@@ -933,6 +957,33 @@
       "requirements": {
         "webosRelease": ">=4"
       }
+    },
+    {
+      "pool": "main",
+      "shortDescription": "VLC's playback engine as a native webOS app",
+      "requirements": {
+        "webosRelease": ">=5.3"
+      },
+      "iconUri": "https://native-webos.github.io/webos-apps-repo/apps/icons/com.sostk.vplayer.png",
+      "detailIconUri": "https://raw.githubusercontent.com/Native-Webos/vplayer/main/app/packaging/icon320.png",
+      "fullDescriptionUrl": "https://native-webos.github.io/webos-apps-repo/api/apps/com.sostk.vplayer/full_description.html",
+      "manifest": {
+        "iconUri": "https://raw.githubusercontent.com/Native-Webos/vplayer/main/app/packaging/icon160.png",
+        "appDescription": "VLC's playback engine as a native webOS app",
+        "id": "com.sostk.vplayer",
+        "title": "Pylon",
+        "version": "0.1.0",
+        "type": "native",
+        "sourceUrl": "https://github.com/Native-Webos/vplayer",
+        "ipkUrl": "https://github.com/Native-Webos/vplayer/releases/download/v0.1.0/Pylon-0.1.0-webos-arm.ipk",
+        "ipkHash": {
+          "sha256": "855dd7efaebca50ccb323edacbf0c1e0ffd937bdba51fe00e878853cbbe243a1"
+        },
+        "ipkSize": 40633328,
+        "rootRequired": false
+      },
+      "id": "com.sostk.vplayer",
+      "title": "Pylon"
     },
     {
       "id": "com.qiiia.demo",
@@ -1253,17 +1304,18 @@
       "title": "StremCompat",
       "manifest": {
         "id": "io.github.alexesmm.legacytv",
-        "version": "4.6.0",
+        "version": "4.8.0",
         "type": "web",
         "title": "StremCompat",
         "appDescription": "Your Stremio or Nuvio account and addons on older LG TVs (webOS 3 and newer). Unofficial, and it needs no root.",
         "iconUri": "https://alexesmm.github.io/stremcompat-lg-webos/icon.png",
         "sourceUrl": "https://github.com/StremCompat/stremcompat",
         "rootRequired": false,
-        "ipkUrl": "https://alexesmm.github.io/stremcompat-lg-webos/io.github.alexesmm.legacytv_4.6.0_all.ipk",
+        "ipkUrl": "https://alexesmm.github.io/stremcompat-lg-webos/io.github.alexesmm.legacytv_4.8.0_all.ipk",
         "ipkHash": {
-          "sha256": "6677476d7e405370c10377468c74ef2e59dade5037c0c556baf4b3856b1e82fd"
-        }
+          "sha256": "8cb8223dbb02a4dc013d1d0e97ba6517042f7ceb5ee4b23d41a90a0161a6652f"
+        },
+        "ipkSize": 6736164
       },
       "iconUri": "https://alexesmm.github.io/stremcompat-lg-webos/icon.png",
       "pool": "main",
@@ -1400,6 +1452,30 @@
       },
       "iconUri": "https://webosappclub.github.io/apps/torrserv.matrix.app/icon.png",
       "shortDescription": "Torrent stream server for webOS"
+    },
+    {
+      "pool": "non-free",
+      "category": "game",
+      "shortDescription": "90s-style arcade road racer",
+      "iconUri": "https://repo.webosbrew.org/apps/icons/com.cristian.turboriviera.png",
+      "fullDescriptionUrl": "https://repo.webosbrew.org/api/non-free/apps/com.cristian.turboriviera/full_description.html",
+      "manifest": {
+        "iconUri": "https://raw.githubusercontent.com/famcellini/TurboRiviera/main/app/largeIcon.png",
+        "appDescription": "90s-style arcade road racer",
+        "id": "com.cristian.turboriviera",
+        "title": "Turbo Riviera",
+        "version": "1.0.1",
+        "type": "web",
+        "sourceUrl": "https://github.com/famcellini/TurboRiviera",
+        "ipkUrl": "https://raw.githubusercontent.com/famcellini/TurboRiviera/main/dist/turboRiviera.ipk",
+        "ipkHash": {
+          "sha256": "897d85b2c0df92d9c70d5fe56b988cb1c52c3975d95a4adac9d25c12bff4ef83"
+        },
+        "ipkSize": 5036452,
+        "rootRequired": false
+      },
+      "id": "com.cristian.turboriviera",
+      "title": "Turbo Riviera"
     },
     {
       "id": "com.willinux.tvh.app",
@@ -1715,17 +1791,18 @@
       "title": "YouTube Foxtended",
       "manifest": {
         "id": "youtube.leanback.v4",
-        "version": "0.10.0",
+        "version": "0.11.0",
         "type": "web",
         "title": "YouTube Foxtended",
         "appDescription": "Ad-free YouTube for webOS 3 and newer, with SponsorBlock, Return YouTube Dislike and DeArrow.",
         "iconUri": "https://raw.githubusercontent.com/foxi69/youtube-webos/main/assets/icon.png",
         "sourceUrl": "https://github.com/foxi69/youtube-webos",
         "rootRequired": false,
-        "ipkUrl": "https://github.com/foxi69/youtube-webos/releases/download/v0.10.0/youtube.leanback.v4_0.10.0_all.ipk",
+        "ipkUrl": "https://github.com/foxi69/youtube-webos/releases/download/v0.11.0/youtube.leanback.v4_0.11.0_all.ipk",
         "ipkHash": {
-          "sha256": "8029c94872c97e5487b8aa12336c3861a1d740ea31aee1668d9a80ca3352c36e"
-        }
+          "sha256": "5974b5d544afa7cff0511bb9df1956beb52e86ab6ca85659631b3c918f5a5085"
+        },
+        "ipkSize": 213964
       },
       "iconUri": "https://raw.githubusercontent.com/foxi69/youtube-webos/main/assets/icon.png",
       "shortDescription": "Ad-free YouTube for webOS 3 and newer, with SponsorBlock, Return YouTube Dislike and DeArrow."
@@ -1735,20 +1812,20 @@
       "title": "ytnative",
       "manifest": {
         "appDescription": "SmartTube ported to LG webOS: a native (Rust) YouTube client for the TV, without ads",
-        "iconUri": "https://raw.githubusercontent.com/danzig666/ytnative/v0.2.72/crates/app/pkg/icon.png",
+        "iconUri": "https://raw.githubusercontent.com/danzig666/ytnative/v0.2.76/crates/app/pkg/icon.png",
         "id": "io.github.danzig666.ytnative",
         "ipkHash": {
-          "sha256": "79bf14b866fb2b2e4ce758581eb27ff7f206c5a637478a07fe205a9f49e6555e"
+          "sha256": "625a50ec5b83d6b9f9dcd5c20b057c038a6fd07a35bfe120e0f4ebd83d4a8a87"
         },
-        "ipkSize": 14377220,
-        "ipkUrl": "https://github.com/danzig666/ytnative/releases/download/v0.2.72/io.github.danzig666.ytnative_0.2.72_arm.ipk",
+        "ipkSize": 15274232,
+        "ipkUrl": "https://github.com/danzig666/ytnative/releases/download/v0.2.76/io.github.danzig666.ytnative_0.2.76_arm.ipk",
         "rootRequired": false,
         "sourceUrl": "https://github.com/danzig666/ytnative",
         "title": "ytnative",
         "type": "native",
-        "version": "0.2.72"
+        "version": "0.2.76"
       },
-      "iconUri": "https://raw.githubusercontent.com/danzig666/ytnative/v0.2.72/crates/app/pkg/icon.png",
+      "iconUri": "https://raw.githubusercontent.com/danzig666/ytnative/v0.2.76/crates/app/pkg/icon.png",
       "pool": "main",
       "shortDescription": "SmartTube for LG webOS: a native YouTube client without ads"
     },
