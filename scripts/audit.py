@@ -170,20 +170,34 @@ def scan_source(url):
                 raise ValueError("pagination cycle")
             seen.add(url)
             d, base = read_json(url)
-            if not isinstance(d.get("packages"), list):
+            if not isinstance(d, dict) or not isinstance(d.get("packages"), list):
                 raise ValueError("missing packages array")
-            for item in d["packages"][:1000]:
+            if len(d["packages"]) > 1000:
+                raise ValueError("page exceeds 1000 packages")
+            for item in d["packages"]:
                 try:
+                    if not isinstance(item, dict):
+                        raise ValueError("package must be an object")
                     results.append(candidate(item, base))
                 except Exception as e:
-                    errors.append({"source": url, "app": str(item.get("title", item.get("id", "?")))[:200], "reason": str(e)})
-            nxt = (d.get("paging") or {}).get("nextUrl")
+                    label = item.get("title", item.get("id", "?")) if isinstance(item, dict) else "?"
+                    errors.append({"source": url, "app": str(label)[:200], "reason": str(e)})
+            paging = d.get("paging")
+            if paging is None:
+                paging = {}
+            if not isinstance(paging, dict):
+                raise ValueError("invalid paging object")
+            nxt = paging.get("nextUrl")
             if not nxt:
-                break
+                return results, errors
+            if not isinstance(nxt, str):
+                raise ValueError("invalid nextUrl")
             url = absolute(base, nxt)
+        raise ValueError("pagination exceeds 20 pages")
     except Exception as e:
-        errors.append({"source": url, "reason": str(e)})
-    return results, errors
+        errors.append({"source": url, "reason": str(e), "discarded_candidates": len(results)})
+        # Never propose changes from an incompletely retrieved source.
+        return [], errors
 
 def ar_members(f):
     if f.read(8) != b"!<arch>\n":

@@ -1,6 +1,7 @@
 """Offline regression tests for catalog identity and conflict quarantine."""
 import unittest
-from scripts.audit import conflicting_versions, validate_baseline
+from unittest.mock import patch
+from scripts.audit import conflicting_versions, validate_baseline, scan_source
 
 A = "a" * 64
 B = "b" * 64
@@ -37,6 +38,54 @@ class CatalogIntegrity(unittest.TestCase):
 
     def test_different_versions_not_conflict(self):
         self.assertEqual(conflicting_versions({("1.0.0", A): {}, ("1.1.0", B): {}}), {})
+
+class FeedIsolation(unittest.TestCase):
+    URL = "https://repo.webosbrew.org/apps.json"
+
+    def test_non_object_isolated(self):
+        with patch("scripts.audit.read_json", return_value=({"packages": [None, {"id": "ok"}, 3]}, self.URL)), \
+             patch("scripts.audit.candidate", return_value={"id": "ok"}):
+            rows, errors = scan_source(self.URL)
+        self.assertEqual(rows, [{"id": "ok"}])
+        self.assertEqual(len(errors), 2)
+
+    def test_non_object_page(self):
+        with patch("scripts.audit.read_json", return_value=([], self.URL)):
+            rows, errors = scan_source(self.URL)
+        self.assertEqual(rows, [])
+        self.assertIn("packages array", errors[0]["reason"])
+
+    def test_oversized_page(self):
+        with patch("scripts.audit.read_json", return_value=({"packages": [{}] * 1001}, self.URL)):
+            rows, errors = scan_source(self.URL)
+        self.assertEqual(rows, [])
+        self.assertIn("1000", errors[0]["reason"])
+
+    def test_cycle_discards_partial_results(self):
+        page = {"packages": [{}], "paging": {"nextUrl": self.URL}}
+        with patch("scripts.audit.read_json", return_value=(page, self.URL)), \
+             patch("scripts.audit.absolute", return_value=self.URL), \
+             patch("scripts.audit.candidate", return_value={"id": "ok"}):
+            rows, errors = scan_source(self.URL)
+        self.assertEqual(rows, [])
+        self.assertEqual(errors[-1]["discarded_candidates"], 1)
+
+    def test_page_limit_discards_partial_results(self):
+        def page(url):
+            return {"packages": [{}], "paging": {"nextUrl": url + "x"}}, url
+        with patch("scripts.audit.read_json", side_effect=page), \
+             patch("scripts.audit.absolute", side_effect=lambda base, url: url), \
+             patch("scripts.audit.candidate", return_value={"id": "ok"}):
+            rows, errors = scan_source(self.URL)
+        self.assertEqual(rows, [])
+        self.assertEqual(errors[-1]["discarded_candidates"], 20)
+
+    def test_invalid_paging_discards_partial(self):
+        with patch("scripts.audit.read_json", return_value=({"packages": [{}], "paging": "bad"}, self.URL)), \
+             patch("scripts.audit.candidate", return_value={"id": "ok"}):
+            rows, errors = scan_source(self.URL)
+        self.assertEqual(rows, [])
+        self.assertIn("paging", errors[-1]["reason"])
 
 if __name__ == "__main__":
     unittest.main()
