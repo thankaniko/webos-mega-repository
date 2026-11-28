@@ -1,0 +1,42 @@
+name: Catalog integrity tests
+on:
+  push:
+    branches: [experimental]
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'apps.json'
+      - '.github/workflows/catalog-tests.yml'
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'apps.json'
+      - '.github/workflows/catalog-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Syntax and regression tests
+        run: |
+          python3 -m py_compile scripts/audit.py
+          python3 -m unittest discover -s tests -v
+      - name: Check published catalog invariants
+        run: |
+          python3 - <<'PY'
+          import json
+          from scripts.audit import validate_baseline
+          with open("apps.json", encoding="utf-8") as f:
+              data = json.load(f)
+          validate_baseline(data["packages"])
+          assert data["paging"]["itemsTotal"] == len(data["packages"])
+          assert data["paging"]["count"] == len(data["packages"])
+          print("Catalog invariants passed:", len(data["packages"]))
+          PY
