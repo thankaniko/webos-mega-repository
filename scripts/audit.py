@@ -349,9 +349,31 @@ def reviewed_candidates():
         errors.append({"source": "Litefin upstream release", "reason": str(e)})
     return results, errors
 
+def validate_baseline(packages):
+    """Never silently collapse duplicate IDs or hashes in the published catalog."""
+    ids, hashes = set(), {}
+    for p in packages:
+        ident, m = p["id"], p["manifest"]
+        if ident != m.get("id") or ident in ids:
+            raise ValueError("duplicate or divergent baseline ID: " + ident)
+        version(m["version"])
+        h = digest(m)
+        if h in hashes:
+            raise ValueError("duplicate baseline SHA-256: " + ident + " / " + hashes[h])
+        ids.add(ident)
+        hashes[h] = ident
+
+def conflicting_versions(group):
+    """An ID/version with multiple advertised digests requires human review."""
+    by_version = {}
+    for ver, sha in group:
+        by_version.setdefault(ver, set()).add(sha)
+    return {ver: sorted(hashes) for ver, hashes in by_version.items() if len(hashes) > 1}
+
 def main():
     base = json.loads((BASE / "apps.json").read_text())
     sources = json.loads((BASE / "sources.json").read_text())
+    validate_baseline(base["packages"])
     old = {p["id"]: p for p in base["packages"]}
     hashes = {digest(p["manifest"]): p["id"] for p in old.values()}
     report = {"existing": len(old), "sources": len(sources), "feed_errors": [], "verified": [], "rejected": [], "existing_flags": []}
@@ -367,7 +389,13 @@ def main():
                 ident = p["id"]
                 if ident in old:
                     previous = old[ident]["manifest"]
-                    if version(m["version"]) <= version(previous["version"]):
+                    if version(m["version"]) == version(previous["version"]):
+                        if digest(m) != digest(previous):
+                            report["existing_flags"].append({"id": ident, "version": m["version"],
+                                "reason": "same-version digest drift; production retained",
+                                "published_sha256": digest(previous), "upstream_sha256": digest(m)})
+                        continue
+                    if version(m["version"]) < version(previous["version"]):
                         continue
                     if not previous.get("sourceUrl") or m.get("sourceUrl", "").rstrip("/") != previous["sourceUrl"].rstrip("/"):
                         report["rejected"].append({"id": ident, "reason": "update source changed"})
@@ -390,6 +418,10 @@ def main():
     def one(entry):
         ident, group = entry
         errors = []
+        conflicts = conflicting_versions(group)
+        if conflicts:
+            return None, None, [{"id": ident, "reason": "conflicting digests for identical version; manual review required",
+                                "conflicts": conflicts}]
         for p in sorted(group.values(), key=lambda p: version(p["manifest"]["version"]), reverse=True):
             try:
                 return p, verify(p), errors
